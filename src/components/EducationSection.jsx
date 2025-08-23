@@ -4,27 +4,29 @@ import { GraduationCap, Award } from 'lucide-react';
 const EducationSection = () => {
   const educationData = [
     {
-      degree: 'Sarjana Teknologi Informasi',
-      school: 'Universitas ABC',
-      period: '2021 - Sekarang',
-      description: 'Fokus pada pengembangan perangkat lunak, basis data, dan teknologi web modern. IPK: 3.8/4.0',
+      degree: 'Diploma in Software Engineering Application',
+      school: 'Telkom University',
+      period: '2024 - Now',
+      description: 'Specializing in software development, database management, and modern web technologies.',
       achievements: [
-        'Mahasiswa Berprestasi 2023', 
+        'Back-end Developer Group Study Club', 
         'Juara 2 Hackathon Campus 2022', 
         'Asisten Praktikum Web Programming',
         'Ketua Himpunan Mahasiswa Teknik Informatika'
       ]
     },
     {
-      degree: 'SMA Jurusan IPA',
-      school: 'SMA Negeri 1 Jakarta',
-      period: '2018 - 2021',
-      description: 'Lulus dengan nilai UN terbaik. Aktif dalam berbagai kegiatan ekstrakurikuler teknologi dan organisasi siswa.',
+      degree: 'Mathematics and Natural Sciences',
+      school: 'SMA Negeri 1 Polanharjo',
+      period: '2021 - 2024',
+      description: 'Graduated with top marks. Active in various extracurricular activities and student organizations.',
       achievements: [
-        'Lulusan Terbaik Angkatan 2021', 
-        'Ketua OSIS Periode 2020-2021', 
-        'Juara 1 Olimpiade Komputer Tingkat Kota',
-        'Juara 2 Lomba Karya Tulis Ilmiah Tingkat Provinsi'
+        'Science Olympiad Champion in Mathematics and Physics 2024',
+        'Participant of the National Science Olympiad in Informatics 2023',
+        'Staff of Mosque Affairs Division, Rohis SMA Negeri 1 Polanharjo 2023 - 2024 Period',
+        'Publication and Documentation Division of MPK, 2021 – 2023 Period',
+        'Member of Discipline Division, Rohis SMA Negeri 1 Polanharjo 2021 - 2022 Period',
+        'Member of Computer Extracurricular Club 2021 - 2022 Period'
       ]
     }
   ];
@@ -35,11 +37,11 @@ const EducationSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-              Pendidikan
+              Education
             </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Perjalanan akademis dan pencapaian pendidikan saya
+            My academic journey and educational achievements.
           </p>
         </div>
 

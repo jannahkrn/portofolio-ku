@@ -8,47 +8,55 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              Tentang Saya
+              About Me
             </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Mahasiswa yang berdedikasi dengan passion dalam teknologi dan kreativitas
+            Building the Future of IT with Technology, Design, and Marketing for Creativity
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-colors">
-              <User className="w-8 h-8 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Background</h3>
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="space-y-6 text-left">
+
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-colors text-left">
+              <div className="flex items-center gap-4 mb-2">
+                <User className="w-8 h-8 text-blue-400" />
+                <h3 className="text-xl font-semibold">Background</h3>
+              </div>
               <p className="text-gray-300">
-                Mahasiswa aktif yang menggabungkan keahlian teknis dalam pengembangan web 
-                dengan kreativitas dalam desain dan strategi pemasaran digital.
+                An active student who combines technical expertise in web development with creativity in design and digital marketing strategy.
               </p>
             </div>
 
-            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-purple-500 transition-colors">
-              <GraduationCap className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Visi</h3>
+
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-purple-500 transition-colors text-left">
+              <div className="flex items-center gap-4 mb-2">
+                <GraduationCap className="w-8 h-8 text-purple-400" />
+                <h3 className="text-xl font-semibold">Vision</h3>
+              </div>
               <p className="text-gray-300">
-                Menjadi developer yang dapat menciptakan solusi teknologi yang bermanfaat 
-                dan memiliki dampak positif bagi masyarakat.
+                Become a developer who can create useful technological solutions 
+                that have a positive impact on society.
               </p>
             </div>
 
-            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-green-500 transition-colors">
-              <Award className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Prestasi</h3>
+
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-green-500 transition-colors text-left">
+              <div className="flex items-center gap-4 mb-2">
+                <Award className="w-8 h-8 text-green-400" />
+                <h3 className="text-xl font-semibold">Achievement</h3>
+              </div>
               <p className="text-gray-300">
-                Aktif dalam berbagai kompetisi programming dan telah menyelesaikan 
-                beberapa proyek freelance di bidang web development dan desain.
+                Active in various programming, design, and business competitions, and has completed 
+                several freelance projects in various fields.
               </p>
             </div>
           </div>
 
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-blue-900/50 to-purple-900/50 p-8 rounded-lg border border-gray-700">
-              <h3 className="text-2xl font-bold mb-6 text-center">Keahlian Utama</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center">Skills</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
                   <Code className="w-12 h-12 text-blue-400 mx-auto mb-2" />
