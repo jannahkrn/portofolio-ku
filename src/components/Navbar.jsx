@@ -4,7 +4,7 @@ const Navbar = ({ activeSection, scrollToSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
+  <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -20,11 +20,10 @@ const Navbar = ({ activeSection, scrollToSection }) => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    activeSection === item.toLowerCase()
-                      ? 'bg-gray-700 text-white'
-                      : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                  }`}
+                  className={`relative px-3 py-2 text-sm font-medium transition-colors outline-none shadow-none focus:outline-none focus:ring-0 active:outline-none active:ring-0
+                    text-gray-300 hover:text-white hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:-bottom-1 hover:after:h-0.5 hover:after:bg-white hover:after:rounded-full hover:after:content-[""] active:text-white active:after:absolute active:after:left-0 active:after:right-0 active:after:-bottom-1 active:after:h-0.5 active:after:bg-white active:after:rounded-full active:after:content-[""]
+                  `}
+                  style={{ background: 'none', border: 'none', boxShadow: 'none' }}
                 >
                   {item}
                 </button>
