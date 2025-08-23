@@ -26,7 +26,10 @@ const HeroSection = ({ scrollToSection }) => {
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="px-8 py-3 border-2 border-gray-400 rounded-full font-semibold hover:border-white hover:bg-white hover:text-gray-900 transition-all"
+              className="px-8 py-3 rounded-full font-semibold bg-gray-900 text-white border-2 border-transparent bg-clip-padding relative overflow-hidden transition-all shadow-lg
+                before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-blue-500 before:to-purple-600 before:opacity-60 before:-z-10
+                hover:before:opacity-100 hover:text-white hover:scale-105"
+              style={{ zIndex: 1 }}
             >
               Hubungi Saya
             </button>
