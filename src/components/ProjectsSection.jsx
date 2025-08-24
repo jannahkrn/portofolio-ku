@@ -355,7 +355,9 @@ const ProjectsSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="#"
+              href="https://github.com/jannahkrn"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-3 bg-gradient-to-r from-violet-200 to-purple-200 text-violet-700 rounded-full font-semibold hover:from-violet-300 hover:to-purple-300 transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
             >
               <Github className="w-5 h-5" />
