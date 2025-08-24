@@ -313,41 +313,6 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {/* Project Stats */}
-        <div className="mt-16 bg-gradient-to-r from-violet-50 via-purple-50 to-rose-50 p-8 rounded-lg border border-violet-100 shadow-sm">
-          <h3 className="text-2xl font-bold text-center mb-8">
-            <span className="bg-gradient-to-r from-violet-300 via-purple-300 to-rose-300 bg-clip-text text-transparent">
-              Statistik Proyek
-            </span>
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center bg-white p-4 rounded-lg shadow-sm">
-              <div className="text-3xl font-bold text-violet-400 mb-2">
-                {projects.length}+
-              </div>
-              <div className="text-slate-600 text-sm">Total Proyek</div>
-            </div>
-            <div className="text-center bg-white p-4 rounded-lg shadow-sm">
-              <div className="text-3xl font-bold text-rose-400 mb-2">
-                {projects.reduce((sum, p) => sum + p.stats.stars, 0)}+
-              </div>
-              <div className="text-slate-600 text-sm">GitHub Stars</div>
-            </div>
-            <div className="text-center bg-white p-4 rounded-lg shadow-sm">
-              <div className="text-3xl font-bold text-purple-400 mb-2">
-                {projects.filter(p => p.featured).length}
-              </div>
-              <div className="text-slate-600 text-sm">Proyek Unggulan</div>
-            </div>
-            <div className="text-center bg-white p-4 rounded-lg shadow-sm">
-              <div className="text-3xl font-bold text-indigo-400 mb-2">
-                {new Set(projects.flatMap(p => p.tech)).size}+
-              </div>
-              <div className="text-slate-600 text-sm">Teknologi</div>
-            </div>
-          </div>
-        </div>
-
         {/* CTA Section */}
         <div className="text-center mt-16">
           <p className="text-slate-500 mb-6">

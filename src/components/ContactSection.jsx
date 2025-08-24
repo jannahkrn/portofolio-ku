@@ -122,7 +122,7 @@ const ContactSection = () => {
 
         <div className="flex justify-center w-full">
           <div className="w-full">
-            <div className="bg-blue-50 p-8 rounded-lg border border-blue-100 shadow-lg">
+            <div className="bg-white p-8 rounded-lg border border-violet-200 shadow-lg">
               <h3 className="text-2xl font-semibold mb-6 text-left text-violet-700">
                 <span className="flex items-center gap-2">
                   <MessageCircle className="w-6 h-6 text-violet-700" />
@@ -146,7 +146,7 @@ const ContactSection = () => {
                   <AlertCircle className="w-5 h-5 text-red-500" />
                   <div>
                     <p className="text-red-600 font-medium">Mohon lengkapi semua field yang diperlukan.</p>
-                    <p className="text-red-500 text-sm">Nama, email, dan pesan harus diisi.</p>
+                    <p className="text-red-500 text-sm text-left">Nama, email, dan pesan harus diisi.</p>
                   </div>
                 </div>
               )}
@@ -155,44 +155,44 @@ const ContactSection = () => {
                 {/* Nama Lengkap */}
                 <div>
                   <label className="block text-sm font-medium text-violet-600 mb-2">
-                    Nama Lengkap *
+                    Nama Lengkap
                   </label>
                   <input 
                     type="text" 
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="Nama Anda"
-                    className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors"
+                    placeholder="Janjun Junnuh"
+                    className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
                     required
                   />
                 </div>
                 {/* Email Address */}
                 <div>
                   <label className="block text-sm font-medium text-violet-600 mb-2">
-                    Email Address *
+                    Email Address
                   </label>
                   <input 
                     type="email" 
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="email@domain.com"
-                    className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors"
+                    placeholder="janjun@example.com"
+                    className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
                     required
                   />
                 </div>
                 {/* Pesan */}
                 <div className="md:col-span-2">
                   <label className="block text-sm font-medium text-violet-600 mb-2">
-                    Pesan *
+                    Pesan
                   </label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Tulis pesan Anda di sini..."
-                    className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors"
+                    placeholder="Hallo!!! ikut lomba bareng yukss!"
+                    className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
                     rows={5}
                     required
                   />
@@ -202,7 +202,7 @@ const ContactSection = () => {
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="mt-8 w-full py-3 px-6 bg-gradient-to-r from-violet-400 to-purple-400 text-white font-semibold rounded-lg shadow-md hover:from-violet-500 hover:to-purple-500 transition-all disabled:opacity-60"
+                className="mt-8 w-auto px-8 py-3 bg-gradient-to-r from-violet-200 to-purple-200 text-violet-700 font-semibold rounded-lg shadow-md hover:from-violet-300 hover:to-purple-300 transition-all disabled:opacity-60 mx-auto block"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
@@ -214,7 +214,7 @@ const ContactSection = () => {
         <div className="flex justify-center w-full mt-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full w-full px-4">
             {/* Box Available */}
-            <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-6 rounded-2xl shadow-lg min-h-[220px] flex flex-col justify-center">
+            <div className="bg-violet-50 border border-violet-200 p-6 rounded-2xl shadow-lg min-h-[220px] flex flex-col justify-center hover:shadow-xl active:scale-95 transition cursor-pointer">
               <h3 className="text-xl font-bold text-green-700 mb-4">
                 Available for New Projects
               </h3>
@@ -229,7 +229,7 @@ const ContactSection = () => {
               </ul>
             </div>
             {/* Box Statistik Kerja */}
-            <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-6 rounded-2xl shadow-lg min-h-[220px] flex flex-col justify-center">
+            <div className="bg-violet-50 border border-violet-200 p-6 rounded-2xl shadow-lg min-h-[220px] flex flex-col justify-center hover:shadow-xl active:scale-95 transition cursor-pointer">
               <h3 className="text-xl font-bold text-purple-700 mb-4">
                 Statistik Kerja
               </h3>
