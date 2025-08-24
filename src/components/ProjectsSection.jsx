@@ -106,15 +106,15 @@ const ProjectsSection = () => {
   const featuredProjects = projects.filter(project => project.featured);
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-300 via-purple-300 to-rose-300 bg-clip-text text-transparent">
               Portfolio Proyek
             </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             Koleksi proyek yang telah saya kerjakan dengan berbagai teknologi dan tingkat kompleksitas
           </p>
         </div>
@@ -122,17 +122,17 @@ const ProjectsSection = () => {
         {/* Featured Projects */}
         <div className="mb-12">
           <h3 className="text-2xl font-bold mb-8 text-center">
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent flex items-center justify-center gap-2">
-              <Star className="w-6 h-6 text-yellow-400" />
+            <span className="bg-gradient-to-r from-violet-300 via-purple-300 to-rose-300 bg-clip-text text-transparent flex items-center justify-center gap-2">
+              <Star className="w-6 h-6 text-rose-300" />
               Proyek Unggulan
             </span>
           </h3>
           
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredProjects.slice(0, 3).map((project) => (
-              <div key={project.id} className="bg-gray-800 rounded-lg overflow-hidden border-2 border-yellow-500/30 hover:border-yellow-500 transition-all group hover:transform hover:scale-105 relative">
+              <div key={project.id} className="bg-violet-50 rounded-lg overflow-hidden border-2 border-rose-200 hover:border-rose-300 transition-all group hover:transform hover:scale-105 relative shadow-sm hover:shadow-md">
                 <div className="absolute top-4 right-4 z-10">
-                  <div className="bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                  <div className="bg-rose-300 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                     <Star className="w-3 h-3" />
                     Featured
                   </div>
@@ -144,13 +144,13 @@ const ProjectsSection = () => {
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-violet-900/60 to-transparent"></div>
                 </div>
                 
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold">{project.title}</h3>
-                    <div className="flex items-center gap-3 text-xs text-gray-400">
+                    <h3 className="text-xl font-semibold text-violet-600">{project.title}</h3>
+                    <div className="flex items-center gap-3 text-xs text-slate-500">
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
                         {project.date}
@@ -162,25 +162,25 @@ const ProjectsSection = () => {
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-slate-600 mb-4 text-sm leading-relaxed line-clamp-3">
                     {project.description}
                   </p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.slice(0, 4).map((tech, techIndex) => (
-                      <span key={techIndex} className="px-3 py-1 bg-gray-700 text-xs rounded-full text-gray-300">
+                      <span key={techIndex} className="px-3 py-1 bg-purple-100 text-xs rounded-full text-purple-600">
                         {tech}
                       </span>
                     ))}
                     {project.tech.length > 4 && (
-                      <span className="px-3 py-1 bg-gray-600 text-xs rounded-full text-gray-400">
+                      <span className="px-3 py-1 bg-slate-200 text-xs rounded-full text-slate-500">
                         +{project.tech.length - 4} more
                       </span>
                     )}
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <div className="flex gap-4 text-xs text-gray-400">
+                    <div className="flex gap-4 text-xs text-slate-500">
                       <span className="flex items-center gap-1">
                         <Star className="w-3 h-3" />
                         {project.stats.stars}
@@ -194,14 +194,14 @@ const ProjectsSection = () => {
                     <div className="flex gap-3">
                       <a 
                         href={project.github}
-                        className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors text-sm"
+                        className="flex items-center gap-1 text-slate-500 hover:text-violet-500 transition-colors text-sm"
                       >
                         <Github className="w-4 h-4" />
                         Code
                       </a>
                       <a 
                         href={project.live}
-                        className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors text-sm"
+                        className="flex items-center gap-1 text-slate-500 hover:text-rose-500 transition-colors text-sm"
                       >
                         <ExternalLink className="w-4 h-4" />
                         Demo
@@ -220,10 +220,10 @@ const ProjectsSection = () => {
             <button
               key={category.id}
               onClick={() => setActiveFilter(category.id)}
-              className={`px-6 py-2 rounded-full font-medium transition-all ${
+              className={`px-6 py-2 rounded-full font-medium transition-all shadow-sm hover:shadow-md ${
                 activeFilter === category.id
-                  ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white'
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white'
+                  ? 'bg-gradient-to-r from-violet-200 to-purple-200 text-violet-700'
+                  : 'bg-violet-50 text-slate-600 hover:bg-violet-100 hover:text-violet-600 border border-violet-100'
               }`}
             >
               {category.name} ({category.count})
@@ -234,18 +234,18 @@ const ProjectsSection = () => {
         {/* All Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <div key={project.id} className="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-orange-500 transition-all group hover:transform hover:scale-105">
+            <div key={project.id} className="bg-violet-50 rounded-lg overflow-hidden border border-violet-100 hover:border-violet-200 transition-all group hover:transform hover:scale-105 shadow-sm hover:shadow-md">
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-violet-900/50 to-transparent"></div>
                 
                 {project.featured && (
                   <div className="absolute top-3 left-3">
-                    <div className="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-xs font-bold flex items-center gap-1">
+                    <div className="bg-rose-300 text-white px-2 py-1 rounded text-xs font-bold flex items-center gap-1">
                       <Star className="w-3 h-3" />
                       Featured
                     </div>
@@ -255,32 +255,32 @@ const ProjectsSection = () => {
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold">{project.title}</h3>
-                  <div className="flex items-center gap-2 text-xs text-gray-400">
+                  <h3 className="text-lg font-semibold text-violet-600">{project.title}</h3>
+                  <div className="flex items-center gap-2 text-xs text-slate-500">
                     <Calendar className="w-3 h-3" />
                     {project.date}
                   </div>
                 </div>
                 
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed line-clamp-2">
+                <p className="text-slate-600 mb-4 text-sm leading-relaxed line-clamp-2">
                   {project.description}
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.slice(0, 3).map((tech, techIndex) => (
-                    <span key={techIndex} className="px-2 py-1 bg-gray-700 text-xs rounded text-gray-300">
+                    <span key={techIndex} className="px-2 py-1 bg-purple-100 text-xs rounded text-purple-600">
                       {tech}
                     </span>
                   ))}
                   {project.tech.length > 3 && (
-                    <span className="px-2 py-1 bg-gray-600 text-xs rounded text-gray-400">
+                    <span className="px-2 py-1 bg-slate-200 text-xs rounded text-slate-500">
                       +{project.tech.length - 3}
                     </span>
                   )}
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <div className="flex gap-3 text-xs text-gray-400">
+                  <div className="flex gap-3 text-xs text-slate-500">
                     <span className="flex items-center gap-1">
                       <Star className="w-3 h-3" />
                       {project.stats.stars}
@@ -294,14 +294,14 @@ const ProjectsSection = () => {
                   <div className="flex gap-3">
                     <a 
                       href={project.github}
-                      className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors text-sm"
+                      className="flex items-center gap-1 text-slate-500 hover:text-violet-500 transition-colors text-sm"
                     >
                       <Github className="w-3 h-3" />
                       Code
                     </a>
                     <a 
                       href={project.live}
-                      className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors text-sm"
+                      className="flex items-center gap-1 text-slate-500 hover:text-rose-500 transition-colors text-sm"
                     >
                       <ExternalLink className="w-3 h-3" />
                       Live
@@ -314,56 +314,56 @@ const ProjectsSection = () => {
         </div>
 
         {/* Project Stats */}
-        <div className="mt-16 bg-gradient-to-r from-gray-800/50 to-gray-700/50 p-8 rounded-lg border border-gray-700">
+        <div className="mt-16 bg-gradient-to-r from-violet-50 via-purple-50 to-rose-50 p-8 rounded-lg border border-violet-100 shadow-sm">
           <h3 className="text-2xl font-bold text-center mb-8">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-300 via-purple-300 to-rose-300 bg-clip-text text-transparent">
               Statistik Proyek
             </span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-400 mb-2">
+            <div className="text-center bg-white p-4 rounded-lg shadow-sm">
+              <div className="text-3xl font-bold text-violet-400 mb-2">
                 {projects.length}+
               </div>
-              <div className="text-gray-300 text-sm">Total Proyek</div>
+              <div className="text-slate-600 text-sm">Total Proyek</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">
+            <div className="text-center bg-white p-4 rounded-lg shadow-sm">
+              <div className="text-3xl font-bold text-rose-400 mb-2">
                 {projects.reduce((sum, p) => sum + p.stats.stars, 0)}+
               </div>
-              <div className="text-gray-300 text-sm">GitHub Stars</div>
+              <div className="text-slate-600 text-sm">GitHub Stars</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">
+            <div className="text-center bg-white p-4 rounded-lg shadow-sm">
+              <div className="text-3xl font-bold text-purple-400 mb-2">
                 {projects.filter(p => p.featured).length}
               </div>
-              <div className="text-gray-300 text-sm">Proyek Unggulan</div>
+              <div className="text-slate-600 text-sm">Proyek Unggulan</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">
+            <div className="text-center bg-white p-4 rounded-lg shadow-sm">
+              <div className="text-3xl font-bold text-indigo-400 mb-2">
                 {new Set(projects.flatMap(p => p.tech)).size}+
               </div>
-              <div className="text-gray-300 text-sm">Teknologi</div>
+              <div className="text-slate-600 text-sm">Teknologi</div>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <p className="text-gray-400 mb-6">
+          <p className="text-slate-500 mb-6">
             Ingin melihat lebih banyak proyek atau berkolaborasi dalam proyek baru?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="#"
-              className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-full font-semibold hover:from-orange-600 hover:to-red-600 transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+              className="px-8 py-3 bg-gradient-to-r from-violet-200 to-purple-200 text-violet-700 rounded-full font-semibold hover:from-violet-300 hover:to-purple-300 transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
             >
               <Github className="w-5 h-5" />
               Lihat Semua di GitHub
             </a>
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 border-2 border-gray-400 rounded-full font-semibold hover:border-white hover:bg-white hover:text-gray-900 transition-all"
+              className="px-8 py-3 border-2 border-rose-200 text-rose-600 rounded-full font-semibold hover:border-rose-300 hover:bg-rose-50 transition-all shadow-sm hover:shadow-md"
             >
               Mulai Proyek Bersama
             </button>
