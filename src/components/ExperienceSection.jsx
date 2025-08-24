@@ -262,26 +262,6 @@ const ExperienceSection = () => {
             ))}
           </div>
         </div>
-
-        {/* Experience Summary */}
-        <div className="mt-16 grid md:grid-cols-4 gap-6">
-          <div className="bg-violet-50 p-6 rounded-lg border border-violet-100 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className="text-3xl font-bold text-violet-400 mb-2">3+</div>
-            <div className="text-slate-600 text-sm">Tahun Pengalaman</div>
-          </div>
-          <div className="bg-rose-50 p-6 rounded-lg border border-rose-100 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className="text-3xl font-bold text-rose-400 mb-2">20+</div>
-            <div className="text-slate-600 text-sm">Proyek Selesai</div>
-          </div>
-          <div className="bg-purple-50 p-6 rounded-lg border border-purple-100 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className="text-3xl font-bold text-purple-400 mb-2">15+</div>
-            <div className="text-slate-600 text-sm">Client Puas</div>
-          </div>
-          <div className="bg-indigo-50 p-6 rounded-lg border border-indigo-100 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className="text-3xl font-bold text-indigo-400 mb-2">50+</div>
-            <div className="text-slate-600 text-sm">Siswa Diajar</div>
-          </div>
-        </div>
       </div>
     </section>
   );
