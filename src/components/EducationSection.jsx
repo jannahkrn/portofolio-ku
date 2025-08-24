@@ -32,15 +32,15 @@ const EducationSection = () => {
   ];
 
   return (
-    <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+    <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-300 via-purple-300 to-rose-300 bg-clip-text text-transparent">
               Education
             </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             My academic journey and educational achievements.
           </p>
         </div>
@@ -50,36 +50,36 @@ const EducationSection = () => {
             <div key={index} className="relative">
               {/* Timeline line */}
               {index !== educationData.length - 1 && (
-                <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-pink-500 hidden lg:block"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet-200 to-rose-200 hidden lg:block"></div>
               )}
               
               <div className={`flex flex-col lg:flex-row gap-8 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                 <div className="lg:w-1/2">
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block mb-4">
+                  <div className="bg-gradient-to-r from-violet-200 to-purple-200 text-violet-700 px-4 py-2 rounded-full text-sm font-semibold inline-block mb-4">
                     {edu.period}
                   </div>
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-purple-500 transition-all">
+                  <div className="bg-violet-50 p-6 rounded-lg border border-violet-100 hover:border-violet-200 transition-all shadow-sm hover:shadow-md">
                     <div className="flex items-center mb-4">
-                      <GraduationCap className="w-8 h-8 text-purple-400 mr-3" />
+                      <GraduationCap className="w-8 h-8 text-violet-400 mr-3" />
                       <div>
-                        <h3 className="text-xl font-semibold">{edu.degree}</h3>
-                        <h4 className="text-purple-400 font-medium">{edu.school}</h4>
+                        <h3 className="text-xl font-semibold text-violet-600">{edu.degree}</h3>
+                        <h4 className="text-violet-400 font-medium">{edu.school}</h4>
                       </div>
                     </div>
-                    <p className="text-gray-300 leading-relaxed">{edu.description}</p>
+                    <p className="text-slate-600 leading-relaxed">{edu.description}</p>
                   </div>
                 </div>
                 
                 <div className="lg:w-1/2">
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-pink-500 transition-all">
-                    <h5 className="font-semibold mb-4 text-pink-400 flex items-center">
+                  <div className="bg-rose-50 p-6 rounded-lg border border-rose-100 hover:border-rose-200 transition-all shadow-sm hover:shadow-md">
+                    <h5 className="font-semibold mb-4 text-rose-400 flex items-center">
                       <Award className="w-5 h-5 mr-2" />
                       Pencapaian & Aktivitas
                     </h5>
                     <ul className="space-y-3">
                       {edu.achievements.map((achievement, achIndex) => (
-                        <li key={achIndex} className="text-gray-300 text-sm flex items-start">
-                          <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <li key={achIndex} className="text-slate-600 text-sm flex items-start">
+                          <div className="w-2 h-2 bg-purple-300 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                           <span>{achievement}</span>
                         </li>
                       ))}
@@ -92,21 +92,21 @@ const EducationSection = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 bg-gradient-to-r from-purple-900/20 to-pink-900/20 p-8 rounded-lg border border-gray-700">
+        <div className="mt-16 bg-purple-50 p-8 rounded-lg border border-purple-100 shadow-sm">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Sertifikasi & Kursus</h3>
+            <h3 className="text-2xl font-bold mb-4 text-violet-600">Sertifikasi & Kursus</h3>
             <div className="grid md:grid-cols-3 gap-4 mt-6">
-              <div className="bg-gray-800 p-4 rounded-lg">
-                <h4 className="font-semibold text-blue-400">Full Stack Web Development</h4>
-                <p className="text-sm text-gray-300">FreeCodeCamp (2023)</p>
+              <div className="bg-violet-50 p-4 rounded-lg shadow-sm border border-violet-100 hover:shadow-md transition-shadow">
+                <h4 className="font-semibold text-violet-400">Full Stack Web Development</h4>
+                <p className="text-sm text-slate-500">FreeCodeCamp (2023)</p>
               </div>
-              <div className="bg-gray-800 p-4 rounded-lg">
-                <h4 className="font-semibold text-green-400">Google Digital Marketing</h4>
-                <p className="text-sm text-gray-300">Google (2022)</p>
+              <div className="bg-rose-50 p-4 rounded-lg shadow-sm border border-rose-100 hover:shadow-md transition-shadow">
+                <h4 className="font-semibold text-rose-400">Google Digital Marketing</h4>
+                <p className="text-sm text-slate-500">Google (2022)</p>
               </div>
-              <div className="bg-gray-800 p-4 rounded-lg">
+              <div className="bg-purple-50 p-4 rounded-lg shadow-sm border border-purple-100 hover:shadow-md transition-shadow">
                 <h4 className="font-semibold text-purple-400">UI/UX Design Fundamentals</h4>
-                <p className="text-sm text-gray-300">Coursera (2022)</p>
+                <p className="text-sm text-slate-500">Coursera (2022)</p>
               </div>
             </div>
           </div>
