@@ -53,7 +53,11 @@ const EducationSection = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet-200 to-rose-200 hidden lg:block"></div>
               )}
               
-              <div className={`flex flex-col lg:flex-row gap-8 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
+              <div className={`flex flex-col lg:flex-row gap-8 relative ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
+                {/* Garis vertikal tepat di tengah antara dua box */}
+                {edu.school === 'SMA Negeri 1 Polanharjo' && (
+                  <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-violet-200 to-rose-200 rounded-full"></div>
+                )}
                 <div className="lg:w-1/2">
                   <div className="bg-gradient-to-r from-violet-200 to-purple-200 text-violet-700 px-4 py-2 rounded-full text-sm font-semibold inline-block mb-4">
                     {edu.period}
@@ -76,7 +80,7 @@ const EducationSection = () => {
                       <Award className="w-5 h-5 mr-2" />
                       Pencapaian & Aktivitas
                     </h5>
-                    <ul className="space-y-3">
+                    <ul className="space-y-3 pl-4">
                       {edu.achievements.map((achievement, achIndex) => (
                         <li key={achIndex} className="text-slate-600 text-sm flex items-start">
                           <div className="w-2 h-2 bg-purple-300 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -90,26 +94,7 @@ const EducationSection = () => {
             </div>
           ))}
         </div>
-
-        {/* Additional Info */}
-        <div className="mt-16 bg-purple-50 p-8 rounded-lg border border-purple-100 shadow-sm text-left">
-          <h3 className="text-2xl font-bold mb-4 text-violet-600">Sertifikasi & Kursus</h3>
-          <div className="grid md:grid-cols-3 gap-4 mt-6">
-            <div className="bg-violet-50 p-4 rounded-lg shadow-sm border border-violet-100 hover:shadow-md transition-shadow">
-              <h4 className="font-semibold text-violet-400">Full Stack Web Development</h4>
-              <p className="text-sm text-slate-500">FreeCodeCamp (2023)</p>
-            </div>
-            <div className="bg-rose-50 p-4 rounded-lg shadow-sm border border-rose-100 hover:shadow-md transition-shadow">
-              <h4 className="font-semibold text-rose-400">Google Digital Marketing</h4>
-              <p className="text-sm text-slate-500">Google (2022)</p>
-            </div>
-            <div className="bg-purple-50 p-4 rounded-lg shadow-sm border border-purple-100 hover:shadow-md transition-shadow">
-              <h4 className="font-semibold text-purple-400">UI/UX Design Fundamentals</h4>
-              <p className="text-sm text-slate-500">Coursera (2022)</p>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
   );
 };
