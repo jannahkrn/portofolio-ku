@@ -22,17 +22,17 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: "Tentang", id: "about" },
-    { name: "Pendidikan", id: "education" },
-    { name: "Pengalaman", id: "experience" },
-    { name: "Keahlian", id: "skills" },
-    { name: "Proyek", id: "projects" },
-    { name: "Kontak", id: "contact" },
+    { name: "About", id: "about" },
+    { name: "Education", id: "education" },
+    { name: "Experience", id: "experience" },
+    { name: "Skills", id: "skills" },
+    { name: "Projects", id: "projects" },
+    { name: "Contact", id: "contact" },
   ];
 
   const services = [
     { name: "Web Development", icon: Code },
-    { name: "UI/UX Design", icon: Palette },
+    { name: "UI/UX Design and Grafis", icon: Palette },
     { name: "Digital Marketing", icon: TrendingUp },
   ];
 
@@ -42,21 +42,21 @@ const Footer = () => {
       icon: Github,
       url: "https://github.com/jannahkrn",
       color: "hover:text-gray-300",
-      description: "Lihat kode & kontribusi",
+      description: "View my code & contributions",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
       url: "https://www.linkedin.com/in/jannahkurniawati",
       color: "hover:text-blue-400",
-      description: "Connect secara profesional",
+      description: "Connect professionally",
     },
     {
       name: "Email",
       icon: Mail,
       url: "mailto:jannahkurnia15@gmail.com",
       color: "hover:text-green-400",
-      description: "Kirim email langsung",
+      description: "Send a direct email",
     },
   ];
 
@@ -79,7 +79,7 @@ const Footer = () => {
             {/* Services */}
             <div className="mb-6">
               <h4 className="text-lg font-semibold mb-4 text-gray-800">
-                Layanan
+                Services
               </h4>
               <div className="space-y-3">
                 {services.map((service, index) => (
@@ -120,7 +120,7 @@ const Footer = () => {
 
           {/* Quick Links - tanpa kotak, underline putih saat hover */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-gray-800">Navigasi</h4>
+            <h4 className="text-lg font-semibold mb-6 text-gray-800 text-left">Navigation</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -137,7 +137,7 @@ const Footer = () => {
 
           {/* Contact Info rata kiri */}
           <div className="text-left">
-            <h4 className="text-lg font-semibold mb-6 text-gray-800">Kontak</h4>
+            <h4 className="text-lg font-semibold mb-6 text-gray-800">Contact</h4>
             <div className="space-y-4">
               <div>
                 <p className="text-gray-500 text-sm mb-1">Email</p>
@@ -150,8 +150,8 @@ const Footer = () => {
               </div>
 
               <div>
-                <p className="text-gray-500 text-sm mb-1">Lokasi</p>
-                <p className="text-gray-700 text-sm">Bandung, Jawa Barat, Indonesia</p>
+                <p className="text-gray-500 text-sm mb-1">Location</p>
+                <p className="text-gray-700 text-sm">Bandung, West Java, Indonesia</p>
               </div>
 
               <div>
@@ -174,13 +174,13 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-gray-500 text-sm">
               <span>&copy; {currentYear} Portfolio.</span>
-              <span>Dibuat oleh Jannah Kurniawati</span>
+              <span>Made by Jannah Kurniawati</span>
             </div>
 
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-4 text-xs text-gray-400">
                 <span>
-                  Last updated: {new Date().toLocaleDateString("id-ID")}
+                  Last updated: {new Date().toLocaleDateString("en-US")}
                 </span>
               </div>
 

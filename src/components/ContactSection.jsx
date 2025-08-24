@@ -22,7 +22,9 @@ const ContactSection = () => {
     });
   };
 
+  // Simulating a form submission
   const handleSubmit = async () => {
+    // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       setSubmitStatus('error');
       setTimeout(() => setSubmitStatus(null), 3000);
@@ -31,9 +33,11 @@ const ContactSection = () => {
 
     setIsSubmitting(true);
     
+    // Simulate API call delay
     setTimeout(() => {
       setSubmitStatus('success');
       setIsSubmitting(false);
+      // Reset form data after successful submission
       setFormData({
         name: '',
         email: '',
@@ -44,6 +48,7 @@ const ContactSection = () => {
         projectType: ''
       });
       
+      // Clear success message after 5 seconds
       setTimeout(() => setSubmitStatus(null), 5000);
     }, 2000);
   };
@@ -54,7 +59,7 @@ const ContactSection = () => {
       title: 'Email',
       value: 'jannahkurnia15@gmail.com',
       link: 'mailto:jannahkurnia15@gmail.com',
-      description: 'Kirim email untuk diskusi proyek',
+      description: 'Send an email to discuss projects',
       color: 'text-blue-400',
       hoverColor: 'hover:border-blue-500'
     },
@@ -63,7 +68,7 @@ const ContactSection = () => {
       title: 'WhatsApp',
       value: '+62 878 4771 2820',
       link: 'https://wa.me/6287847712820',
-      description: 'Chat langsung via WhatsApp',
+      description: 'Chat directly via WhatsApp',
       color: 'text-green-400',
       hoverColor: 'hover:border-green-500'
     },
@@ -72,7 +77,7 @@ const ContactSection = () => {
       title: 'LinkedIn',
       value: 'www.linkedin.com/in/jannahkurniawati',
       link: 'https://www.linkedin.com/in/jannahkurniawati',
-      description: 'Connect untuk networking',
+      description: 'Connect for networking',
       color: 'text-purple-400',
       hoverColor: 'hover:border-purple-500'
     },
@@ -81,14 +86,14 @@ const ContactSection = () => {
       title: 'GitHub',
       value: 'github.com/jannahkrn',
       link: 'https://github.com/jannahkrn',
-      description: 'Lihat semua repository',
+      description: 'View all repositories',
       color: 'text-yellow-400',
       hoverColor: 'hover:border-yellow-500'
     },
     {
       icon: MapPin,
-      title: 'Lokasi',
-      value: 'Bandung, Jawa Barat, Indonesia',
+      title: 'Location',
+      value: 'Bandung, West Java, Indonesia',
       link: '#',
       description: 'Available for remote work',
       color: 'text-red-400',
@@ -111,12 +116,12 @@ const ContactSection = () => {
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-violet-300 via-purple-300 to-rose-300 bg-clip-text text-transparent">
-              Mari Berkolaborasi
+              Let's Collaborate
             </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Punya ide proyek menarik? Atau ingin berkolaborasi? Jangan ragu untuk menghubungi saya. 
-            Saya siap membantu mewujudkan visi digital Anda!
+            Have an exciting project idea? Or want to collaborate? Don't hesitate to contact me. 
+            I'm ready to help bring your digital vision to life!
           </p>
         </div>
 
@@ -126,7 +131,7 @@ const ContactSection = () => {
               <h3 className="text-2xl font-semibold mb-6 text-left text-violet-700">
                 <span className="flex items-center gap-2">
                   <MessageCircle className="w-6 h-6 text-violet-700" />
-                  Kirim Pesan
+                  Send a Message
                 </span>
               </h3>
 
@@ -135,8 +140,8 @@ const ContactSection = () => {
                 <div className="mb-6 p-4 bg-green-100 border border-green-300 rounded-lg flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   <div>
-                    <p className="text-green-600 font-medium">Pesan berhasil dikirim!</p>
-                    <p className="text-green-500 text-sm">Terima kasih, saya akan membalas dalam 24 jam.</p>
+                    <p className="text-green-600 font-medium">Message sent successfully!</p>
+                    <p className="text-green-500 text-sm">Thank you, I will reply within 24 hours.</p>
                   </div>
                 </div>
               )}
@@ -145,24 +150,24 @@ const ContactSection = () => {
                 <div className="mb-6 p-4 bg-red-100 border border-red-300 rounded-lg flex items-center gap-3">
                   <AlertCircle className="w-5 h-5 text-red-500" />
                   <div>
-                    <p className="text-red-600 font-medium">Mohon lengkapi semua field yang diperlukan.</p>
-                    <p className="text-red-500 text-sm text-left">Nama, email, dan pesan harus diisi.</p>
+                    <p className="text-red-600 font-medium">Please complete all required fields.</p>
+                    <p className="text-red-500 text-sm text-left">Name, email, and message are required.</p>
                   </div>
                 </div>
               )}
 
               <div className="grid md:grid-cols-2 gap-6">
-                {/* Nama Lengkap */}
+                {/* Full Name */}
                 <div>
                   <label className="block text-sm font-medium text-violet-600 mb-2">
-                    Nama Lengkap
+                    Full Name
                   </label>
                   <input 
                     type="text" 
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="Janjun Junnuh"
+                    placeholder="Jane Doe"
                     className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
                     required
                   />
@@ -177,21 +182,21 @@ const ContactSection = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="janjun@example.com"
+                    placeholder="jane.doe@example.com"
                     className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
                     required
                   />
                 </div>
-                {/* Pesan */}
+                {/* Message */}
                 <div className="md:col-span-2">
                   <label className="block text-sm font-medium text-violet-600 mb-2">
-                    Pesan
+                    Message
                   </label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Hallo!!! ikut lomba bareng yukss!"
+                    placeholder="Hi! I have an exciting project idea for you."
                     className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
                     rows={5}
                     required
@@ -205,33 +210,33 @@ const ContactSection = () => {
                 className="mt-8 w-auto px-8 py-3 bg-gradient-to-r from-violet-200 to-purple-200 text-violet-700 font-semibold rounded-lg shadow-md hover:from-violet-300 hover:to-purple-300 transition-all disabled:opacity-60 mx-auto block"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </div>
           </div>
         </div>
-        {/* Info Box Centered di bawah form */}
+        {/* Info Box Centered below form */}
         <div className="flex justify-center w-full mt-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full w-full px-4">
-            {/* Box Available */}
+            {/* Available Box */}
             <div className="bg-violet-50 border border-violet-200 p-6 rounded-2xl shadow-lg min-h-[220px] flex flex-col justify-center hover:shadow-xl active:scale-95 transition cursor-pointer">
               <h3 className="text-xl font-bold text-green-700 mb-4">
                 Available for New Projects
               </h3>
-              <p className="text-gray-700 mb-4">
-                Saat ini saya terbuka untuk menerima proyek baru. Baik itu freelance, 
-                part-time, atau kolaborasi jangka panjang.
+              <p className="text-gray-700 mb-4 text-left">
+                I am currently open to new projects, whether freelance, 
+                part-time, or long-term collaboration.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 text-left">
                 <li>✔ Remote work friendly</li>
                 <li>✔ Flexible timeline</li>
                 <li>✔ Competitive rates</li>
               </ul>
             </div>
-            {/* Box Statistik Kerja */}
+            {/* Work Statistics Box */}
             <div className="bg-violet-50 border border-violet-200 p-6 rounded-2xl shadow-lg min-h-[220px] flex flex-col justify-center hover:shadow-xl active:scale-95 transition cursor-pointer">
               <h3 className="text-xl font-bold text-purple-700 mb-4">
-                Statistik Kerja
+                Work Statistics
               </h3>
               <div className="grid grid-cols-2 gap-6">
                 <div className="flex flex-col items-center">

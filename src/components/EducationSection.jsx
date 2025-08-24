@@ -23,9 +23,9 @@ const EducationSection = () => {
       achievements: [
         'Science Olympiad Champion in Mathematics and Physics 2024',
         'Participant of the National Science Olympiad in Informatics 2023',
-        'Staff of Mosque Affairs Division, Rohis SMA Negeri 1 Polanharjo 2023 - 2024 Period',
-        'Publication and Documentation Division of MPK, 2021 – 2023 Period',
-        'Member of Discipline Division, Rohis SMA Negeri 1 Polanharjo 2021 - 2022 Period',
+        'Mosque Affairs Division, Rohis SMA Negeri 1 Polanharjo 2023 - 2024 Period',
+        'Publication and Documentation Division, MPK SMA Negeri 1 Polanharjo 2021 – 2023 Period',
+        'Discipline Division, Rohis SMA Negeri 1 Polanharjo 2021 - 2022 Period',
         'Member of Computer Extracurricular Club 2021 - 2022 Period'
       ]
     }
