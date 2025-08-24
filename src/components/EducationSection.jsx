@@ -4,10 +4,10 @@ import { GraduationCap, Award } from 'lucide-react';
 const EducationSection = () => {
   const educationData = [
     {
-      degree: 'Diploma in Software Engineering Application',
+      degree: 'Software Engineering Application',
       school: 'Telkom University',
       period: '2024 - Now',
-      description: 'Specializing in software development, database management, and modern web technologies.',
+      description: 'Specializing in software development, database management, and modern web technologies. Actively participated in several competitions, including design thinking, programming, web design, and business competitions, as well as being involved in student organizations and study groups.',
       achievements: [
         'Back-end Developer Group Study Club', 
         'Juara 2 Hackathon Campus 2022', 
@@ -32,7 +32,7 @@ const EducationSection = () => {
   ];
 
   return (
-    <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  <section id="education" className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
