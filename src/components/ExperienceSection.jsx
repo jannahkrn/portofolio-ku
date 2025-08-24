@@ -63,24 +63,24 @@ const ExperienceSection = () => {
 
   const getTypeColor = (type) => {
     switch(type) {
-      case 'Full Time': return 'bg-green-100 text-green-800 border-green-200';
-      case 'Part Time': return 'bg-blue-100 text-blue-800 border-blue-200';
-      case 'Freelance': return 'bg-purple-100 text-purple-800 border-purple-200';
-      case 'Internship': return 'bg-orange-100 text-orange-800 border-orange-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
+      case 'Full Time': return 'bg-emerald-50 text-emerald-600 border-emerald-200';
+      case 'Part Time': return 'bg-violet-50 text-violet-600 border-violet-200';
+      case 'Freelance': return 'bg-purple-50 text-purple-600 border-purple-200';
+      case 'Internship': return 'bg-rose-50 text-rose-600 border-rose-200';
+      default: return 'bg-slate-50 text-slate-600 border-slate-200';
     }
   };
 
   return (
-    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-300 via-purple-300 to-rose-300 bg-clip-text text-transparent">
               Pengalaman Kerja
             </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             Perjalanan profesional dan pembelajaran saya di berbagai bidang
           </p>
         </div>
@@ -90,12 +90,12 @@ const ExperienceSection = () => {
             <div key={index} className="relative">
               {/* Timeline line for desktop */}
               {index !== experiences.length - 1 && (
-                <div className="hidden md:block absolute left-8 top-16 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-transparent"></div>
+                <div className="hidden md:block absolute left-8 top-16 bottom-0 w-0.5 bg-gradient-to-b from-violet-200 to-transparent"></div>
               )}
               
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="md:w-1/4 flex-shrink-0">
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block mb-2">
+                  <div className="bg-gradient-to-r from-violet-200 to-purple-200 text-violet-700 px-4 py-2 rounded-full text-sm font-semibold inline-block mb-2">
                     {exp.period}
                   </div>
                   <div className={`inline-block px-3 py-1 rounded-full text-xs font-medium border ${getTypeColor(exp.type)} ml-2`}>
@@ -104,34 +104,34 @@ const ExperienceSection = () => {
                 </div>
                 
                 <div className="md:w-3/4">
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all group">
+                  <div className="bg-violet-50 p-6 rounded-lg border border-violet-100 hover:border-violet-200 transition-all group shadow-sm hover:shadow-md">
                     <div className="flex items-start gap-4">
-                      <div className="p-2 bg-blue-500/10 rounded-lg group-hover:bg-blue-500/20 transition-colors">
-                        <Briefcase className="w-6 h-6 text-blue-400" />
+                      <div className="p-2 bg-violet-100 rounded-lg group-hover:bg-violet-200 transition-colors">
+                        <Briefcase className="w-6 h-6 text-violet-400" />
                       </div>
                       <div className="flex-1">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                          <h3 className="text-xl font-semibold text-white">{exp.title}</h3>
-                          <div className="flex items-center text-gray-400 text-sm">
+                          <h3 className="text-xl font-semibold text-violet-600">{exp.title}</h3>
+                          <div className="flex items-center text-slate-500 text-sm">
                             <MapPin className="w-4 h-4 mr-1" />
                             {exp.location}
                           </div>
                         </div>
                         
-                        <h4 className="text-blue-400 font-medium mb-3 flex items-center">
+                        <h4 className="text-violet-400 font-medium mb-3 flex items-center">
                           {exp.company}
                           <Calendar className="w-4 h-4 ml-2 mr-1" />
-                          <span className="text-gray-400 text-sm">{exp.period}</span>
+                          <span className="text-slate-500 text-sm">{exp.period}</span>
                         </h4>
                         
-                        <p className="text-gray-300 leading-relaxed mb-4">{exp.description}</p>
+                        <p className="text-slate-600 leading-relaxed mb-4">{exp.description}</p>
                         
                         {/* Skills */}
                         <div className="mb-4">
-                          <h5 className="text-sm font-semibold text-gray-400 mb-2">Tech Stack:</h5>
+                          <h5 className="text-sm font-semibold text-slate-500 mb-2">Tech Stack:</h5>
                           <div className="flex flex-wrap gap-2">
                             {exp.skills.map((skill, skillIndex) => (
-                              <span key={skillIndex} className="px-3 py-1 bg-gray-700 text-xs rounded-full text-gray-300 hover:bg-gray-600 transition-colors">
+                              <span key={skillIndex} className="px-3 py-1 bg-purple-100 text-xs rounded-full text-purple-600 hover:bg-purple-200 transition-colors">
                                 {skill}
                               </span>
                             ))}
@@ -140,14 +140,14 @@ const ExperienceSection = () => {
                         
                         {/* Achievements */}
                         <div>
-                          <h5 className="text-sm font-semibold text-yellow-400 mb-2 flex items-center">
+                          <h5 className="text-sm font-semibold text-rose-400 mb-2 flex items-center">
                             <Star className="w-4 h-4 mr-1" />
                             Key Achievements:
                           </h5>
                           <ul className="space-y-1">
                             {exp.achievements.map((achievement, achIndex) => (
-                              <li key={achIndex} className="text-gray-300 text-sm flex items-start">
-                                <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full mt-2 mr-2 flex-shrink-0"></div>
+                              <li key={achIndex} className="text-slate-600 text-sm flex items-start">
+                                <div className="w-1.5 h-1.5 bg-rose-300 rounded-full mt-2 mr-2 flex-shrink-0"></div>
                                 {achievement}
                               </li>
                             ))}
@@ -164,21 +164,21 @@ const ExperienceSection = () => {
 
         {/* Experience Summary */}
         <div className="mt-16 grid md:grid-cols-4 gap-6">
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">3+</div>
-            <div className="text-gray-300 text-sm">Tahun Pengalaman</div>
+          <div className="bg-violet-50 p-6 rounded-lg border border-violet-100 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="text-3xl font-bold text-violet-400 mb-2">3+</div>
+            <div className="text-slate-600 text-sm">Tahun Pengalaman</div>
           </div>
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center">
-            <div className="text-3xl font-bold text-green-400 mb-2">20+</div>
-            <div className="text-gray-300 text-sm">Proyek Selesai</div>
+          <div className="bg-rose-50 p-6 rounded-lg border border-rose-100 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="text-3xl font-bold text-rose-400 mb-2">20+</div>
+            <div className="text-slate-600 text-sm">Proyek Selesai</div>
           </div>
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center">
+          <div className="bg-purple-50 p-6 rounded-lg border border-purple-100 text-center shadow-sm hover:shadow-md transition-shadow">
             <div className="text-3xl font-bold text-purple-400 mb-2">15+</div>
-            <div className="text-gray-300 text-sm">Client Puas</div>
+            <div className="text-slate-600 text-sm">Client Puas</div>
           </div>
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center">
-            <div className="text-3xl font-bold text-orange-400 mb-2">50+</div>
-            <div className="text-gray-300 text-sm">Siswa Diajar</div>
+          <div className="bg-indigo-50 p-6 rounded-lg border border-indigo-100 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="text-3xl font-bold text-indigo-400 mb-2">50+</div>
+            <div className="text-slate-600 text-sm">Siswa Diajar</div>
           </div>
         </div>
       </div>
