@@ -10,10 +10,10 @@ const EducationSection = () => {
       description: 'Specializing in software development, database management, and modern web technologies. Actively participated in several competitions, including design thinking, programming, web design, and business competitions, as well as being involved in student organizations and study groups.',
       achievements: [
         'Chairman of Publications and Documentation, PaMTKla 2025 - 2026 Period',
+        'Liaison Officer, ONION 13URN 2025',
         'Member of Digistar Club, 2025', 
-        'Liaison Officer, ONION 13URN 2025', 
-        'Member of IoT, Chevalier Laboratory SAS 2024-2025 Period',
         'Backend Developer, Chevalier Laboratory SAS 2024-2025 Period',
+        'Member of IoT, Chevalier Laboratory SAS 2024-2025 Period',
         'Public Relation and Service, Marketing Crew 2024-2025 Period'
       ]
     },
@@ -21,7 +21,7 @@ const EducationSection = () => {
       degree: 'Mathematics and Natural Sciences',
       school: 'SMA Negeri 1 Polanharjo',
       period: '2021 - 2024',
-      description: 'Graduated with top marks. Active in various extracurricular activities and student organizations.',
+      description: 'Graduated with high marks. Active in various competitions in mathematics and natural sciences, as well as extracurricular activities and school organizations.',
       achievements: [
         'Science Olympiad Champion in Mathematics and Physics 2024',
         'Participant of the National Science Olympiad in Informatics 2023',
