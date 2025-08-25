@@ -1,56 +1,33 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Mail, Linkedin, Github, Send, Phone, MapPin, MessageCircle, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-    budget: '',
-    timeline: '',
-    projectType: ''
-  });
-
+  const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  // Simulating a form submission
-  const handleSubmit = async () => {
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      setSubmitStatus('error');
-      setTimeout(() => setSubmitStatus(null), 3000);
-      return;
-    }
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call delay
-    setTimeout(() => {
-      setSubmitStatus('success');
-      setIsSubmitting(false);
-      // Reset form data after successful submission
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-        budget: '',
-        timeline: '',
-        projectType: ''
+
+    const serviceId = 'service_l5sjkhq'; // Ganti dengan Service ID Anda
+    const templateId = 'template_susburu'; // Ganti dengan Template ID Anda
+    const publicKey = 'njdBF3XdYR4aFXzRt'; // Ganti dengan Public Key Anda
+
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+      .then((result) => {
+          console.log(result.text);
+          setSubmitStatus('success');
+      }, (error) => {
+          console.log(error.text);
+          setSubmitStatus('error');
+      })
+      .finally(() => {
+          setIsSubmitting(false);
+          e.target.reset(); // Mengosongkan form setelah terkirim
+          setTimeout(() => setSubmitStatus(null), 5000); // Menghilangkan pesan status setelah 5 detik
       });
-      
-      // Clear success message after 5 seconds
-      setTimeout(() => setSubmitStatus(null), 5000);
-    }, 2000);
   };
 
   const contactInfo = [
@@ -111,7 +88,7 @@ const ContactSection = () => {
   ];
 
   return (
-  <section id="contact" className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="contact" className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto bg-white">
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -120,7 +97,7 @@ const ContactSection = () => {
             </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Have an exciting project idea? Or want to collaborate? Don't hesitate to contact me. 
+            Have an exciting project idea? Or want to collaborate? Don't hesitate to contact me.
             I'm ready to help bring your digital vision to life!
           </p>
         </div>
@@ -135,7 +112,6 @@ const ContactSection = () => {
                 </span>
               </h3>
 
-              {/* Status Messages */}
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-100 border border-green-300 rounded-lg flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500" />
@@ -150,71 +126,67 @@ const ContactSection = () => {
                 <div className="mb-6 p-4 bg-red-100 border border-red-300 rounded-lg flex items-center gap-3">
                   <AlertCircle className="w-5 h-5 text-red-500" />
                   <div>
-                    <p className="text-red-600 font-medium">Please complete all required fields.</p>
-                    <p className="text-red-500 text-sm text-left">Name, email, and message are required.</p>
+                    <p className="text-red-600 font-medium">Failed to send message.</p>
+                    <p className="text-red-500 text-sm text-left">Please try again or contact me directly.</p>
                   </div>
                 </div>
               )}
 
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Full Name */}
-                <div>
-                  <label className="block text-sm font-medium text-violet-600 mb-2">
-                    Full Name
-                  </label>
-                  <input 
-                    type="text" 
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Janjun"
-                    className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
-                    required
-                  />
+              <form ref={form} onSubmit={handleSubmit}>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {/* Full Name */}
+                  <div>
+                    <label className="block text-sm font-medium text-violet-600 mb-2">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      name="from_name" // Sesuaikan dengan variabel di template EmailJS
+                      placeholder="Janjun"
+                      className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
+                      required
+                    />
+                  </div>
+                  {/* Email Address */}
+                  <div>
+                    <label className="block text-sm font-medium text-violet-600 mb-2">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      name="from_email" // Sesuaikan dengan variabel di template EmailJS
+                      placeholder="janjun@example.com"
+                      className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
+                      required
+                    />
+                  </div>
+                  {/* Message */}
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-medium text-violet-600 mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      name="message" // Sesuaikan dengan variabel di template EmailJS
+                      placeholder="HI JANJUNNN! Let us connect and collaborate on projects!"
+                      className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
+                      rows={5}
+                      required
+                    />
+                  </div>
                 </div>
-                {/* Email Address */}
-                <div>
-                  <label className="block text-sm font-medium text-violet-600 mb-2">
-                    Email Address
-                  </label>
-                  <input 
-                    type="email" 
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="janjun@example.com"
-                    className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
-                    required
-                  />
-                </div>
-                {/* Message */}
-                <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-violet-600 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="HI JANJUNNN! Let us connect and collaborate on projects!"
-                    className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
-                    rows={5}
-                    required
-                  />
-                </div>
-              </div>
 
-              <button
-                type="button"
-                onClick={handleSubmit}
-                className="mt-8 w-auto px-8 py-3 bg-gradient-to-r from-violet-200 to-purple-200 text-violet-700 font-semibold rounded-lg shadow-md hover:from-violet-300 hover:to-purple-300 transition-all disabled:opacity-60 mx-auto block"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
+                <button
+                  type="submit"
+                  className="mt-8 w-auto px-8 py-3 bg-gradient-to-r from-violet-200 to-purple-200 text-violet-700 font-semibold rounded-lg shadow-md hover:from-violet-300 hover:to-purple-300 transition-all disabled:opacity-60 mx-auto block"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+              </form>
             </div>
           </div>
         </div>
+
         {/* Info Box Centered below form */}
         <div className="flex justify-center w-full mt-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full w-full px-4">
@@ -224,7 +196,7 @@ const ContactSection = () => {
                 Available for New Projects
               </h3>
               <p className="text-gray-700 mb-4 text-left">
-                I am currently open to new projects, whether freelance, 
+                I am currently open to new projects, whether freelance,
                 part-time, or long-term collaboration.
               </p>
               <ul className="space-y-2 text-gray-600 text-left">
