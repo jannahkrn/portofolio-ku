@@ -9,9 +9,7 @@ import {
 } from "lucide-react";
 import {
   SiReact,
-  SiVuedotjs,
   SiJavascript,
-  SiTypescript,
   SiHtml5,
   SiCss3,
   SiTailwindcss,
@@ -19,12 +17,8 @@ import {
   SiExpress,
   SiPython,
   SiPhp,
-  SiMongodb,
   SiMysql,
   SiReactrouter,
-  SiFlutter,
-  SiIonic,
-  SiFirebase,
   SiFigma,
   SiAdobexd,
   SiSketch,
@@ -35,11 +29,10 @@ import {
   SiFacebook,
   SiGmail,
   SiGithub,
-  SiDocker,
-  SiAwsamplify,
   SiNetlify,
-  SiLinux,
   SiGithubactions,
+  SiLaravel,
+  SiPostgresql, // ⬅️ Tambahan untuk PostgreSQL
 } from "react-icons/si";
 import PhotoshopLogo from "../assets/skill-logos/photoshop.svg";
 import IllustratorLogo from "../assets/skill-logos/illustrator.svg";
@@ -56,12 +49,10 @@ import MeetLogo from "../assets/skill-logos/meet.png";
 import TeamsLogo from "../assets/skill-logos/teams.png";
 
 const SkillsSection = () => {
-  // Skill logo mapping (replace with actual logo imports or emoji for demo)
+  // Skill logo mapping
   const skillLogos = {
     "React.js": <SiReact className="text-sky-500" />,
-    "Vue.js": <SiVuedotjs className="text-green-500" />,
     "JavaScript (ES6+)": <SiJavascript className="text-yellow-400" />,
-    TypeScript: <SiTypescript className="text-blue-500" />,
     "HTML5 & CSS3": (
       <span>
         <SiHtml5 className="text-orange-500 inline" />{" "}
@@ -73,22 +64,19 @@ const SkillsSection = () => {
     "Express.js": <SiExpress className="text-gray-700" />,
     Python: <SiPython className="text-yellow-500" />,
     PHP: <SiPhp className="text-indigo-500" />,
-    MongoDB: <SiMongodb className="text-green-700" />,
+    Laravel: <SiLaravel className="text-red-600" />,
     MySQL: <SiMysql className="text-blue-600" />,
+    PostgreSQL: <SiPostgresql className="text-sky-700" />, // ⬅️ PostgreSQL logo
     "React Native": <SiReact className="text-sky-500" />,
-    Flutter: <SiFlutter className="text-blue-400" />,
-    Ionic: <SiIonic className="text-blue-500" />,
-    Firebase: <SiFirebase className="text-yellow-400" />,
+    Flutter: <SiReactrouter className="text-blue-400" />,
+    Ionic: <SiReactrouter className="text-blue-500" />,
+    Firebase: <SiReactrouter className="text-yellow-400" />,
     "App Store Deploy": <SiReactrouter className="text-pink-500" />,
     Figma: <img src={FigmaLogo} alt="Figma" className="w-8 h-8 inline" />,
     "Adobe XD": <img src={XdLogo} alt="Adobe XD" className="w-8 h-8 inline" />,
     Sketch: <SiSketch className="text-yellow-400" />,
     "Adobe Photoshop": (
-      <img
-        src={PhotoshopLogo}
-        alt="Adobe Photoshop"
-        className="w-8 h-8 inline"
-      />
+      <img src={PhotoshopLogo} alt="Adobe Photoshop" className="w-8 h-8 inline" />
     ),
     "Adobe Illustrator": (
       <img
@@ -105,16 +93,11 @@ const SkillsSection = () => {
     "Facebook Ads": <SiFacebook className="text-blue-600" />,
     "Email Marketing": <SiGmail className="text-red-500" />,
     "Git & GitHub": <SiGithub className="text-gray-800" />,
-    Docker: <SiDocker className="text-blue-400" />,
-    AWS: <SiAwsamplify className="text-yellow-500" />,
     "Netlify/Vercel": <SiNetlify className="text-green-400" />,
     "CI/CD": <SiGithubactions className="text-blue-500" />,
-    Linux: <SiLinux className="text-black" />,
     Notion: <img src={NotionLogo} alt="Notion" className="w-8 h-8 inline" />,
     Postman: <img src={PostmanLogo} alt="Postman" className="w-8 h-8 inline" />,
-    "VS Code": (
-      <img src={VscodeLogo} alt="VS Code" className="w-8 h-8 inline" />
-    ),
+    "VS Code": <img src={VscodeLogo} alt="VS Code" className="w-8 h-8 inline" />,
     Canva: <img src={CanvaLogo} alt="Canva" className="w-8 h-8 inline" />,
     Word: WordLogo ? (
       <img src={WordLogo} alt="Word" className="w-8 h-8 inline" />
@@ -173,21 +156,11 @@ const SkillsSection = () => {
         className="inline"
       />
     ),
-    Notion: <img src={NotionLogo} alt="Notion" className="w-8 h-8 inline" />,
-    Postman: <img src={PostmanLogo} alt="Postman" className="w-8 h-8 inline" />,
-    "VS Code": (
-      <img src={VscodeLogo} alt="VS Code" className="w-8 h-8 inline" />
-    ),
-    Canva: <img src={CanvaLogo} alt="Canva" className="w-8 h-8 inline" />,
   };
 
   const tools = [
     { name: "Git & GitHub", icon: skillLogos["Git & GitHub"] },
-    { name: "Docker", icon: skillLogos["Docker"] },
-    { name: "AWS", icon: skillLogos["AWS"] },
     { name: "Netlify/Vercel", icon: skillLogos["Netlify/Vercel"] },
-    { name: "CI/CD", icon: skillLogos["CI/CD"] },
-    { name: "Linux", icon: skillLogos["Linux"] },
     { name: "VS Code", icon: skillLogos["VS Code"] },
     { name: "Postman", icon: skillLogos["Postman"] },
     { name: "Chrome DevTools", icon: "🔍" },
@@ -212,9 +185,7 @@ const SkillsSection = () => {
       bgColor: "bg-violet-50",
       skills: [
         { name: "React.js" },
-        { name: "Vue.js" },
         { name: "JavaScript (ES6+)" },
-        { name: "TypeScript" },
         { name: "HTML5 & CSS3" },
         { name: "Tailwind CSS" },
       ],
@@ -232,8 +203,20 @@ const SkillsSection = () => {
         { name: "Express.js" },
         { name: "Python" },
         { name: "PHP" },
-        { name: "MongoDB" },
+        { name: "Laravel" },
+      ],
+    },
+    {
+      title: "Database",
+      icon: Database,
+      color: "from-green-200 to-emerald-200",
+      textColor: "text-green-600",
+      borderColor: "border-green-100",
+      hoverBorder: "hover:border-green-200",
+      bgColor: "bg-green-50",
+      skills: [
         { name: "MySQL" },
+        { name: "PostgreSQL" },
       ],
     },
     {
@@ -244,13 +227,7 @@ const SkillsSection = () => {
       borderColor: "border-rose-100",
       hoverBorder: "hover:border-rose-200",
       bgColor: "bg-rose-50",
-      skills: [
-        { name: "React Native" },
-        { name: "Flutter" },
-        { name: "Ionic" },
-        { name: "Firebase" },
-        { name: "App Store Deploy" },
-      ],
+      skills: [],
     },
     {
       title: "UI/UX Design",
@@ -297,24 +274,24 @@ const SkillsSection = () => {
       bgColor: "bg-indigo-50",
       skills: [
         { name: "Git & GitHub" },
-        { name: "Docker" },
-        { name: "AWS" },
         { name: "Netlify/Vercel" },
-        { name: "CI/CD" },
-        { name: "Linux" },
       ],
     },
   ];
 
-  // Gabungkan semua skill dari skillCategories dan tools ke allSkills tanpa duplikat
+  // Gabungkan semua skill
   const allSkillsRaw = [
     ...skillCategories.flatMap((cat) =>
       cat.skills.map((skill) => ({ ...skill, category: cat.title }))
     ),
-    ...tools.map((tool) => ({ name: tool.name, icon: tool.icon, category: "DevOps & Tools" })),
+    ...tools.map((tool) => ({
+      name: tool.name,
+      icon: tool.icon,
+      category: "DevOps & Tools",
+    })),
   ];
-  const allSkills = allSkillsRaw.filter((skill, idx, arr) =>
-    arr.findIndex((s) => s.name === skill.name) === idx
+  const allSkills = allSkillsRaw.filter(
+    (skill, idx, arr) => arr.findIndex((s) => s.name === skill.name) === idx
   );
 
   // Filter state
@@ -331,20 +308,16 @@ const SkillsSection = () => {
     { label: "Digital Marketing", key: "Digital Marketing" },
   ];
 
-  // Gabungkan tools ke dalam filter 'Tools'
+  // Gabungkan tools ke dalam filter
   const displayedSkills =
     filter === "All"
       ? allSkills
       : filter === "DevOps & Tools"
       ? tools.map((tool) => ({ ...tool, category: "DevOps & Tools" }))
-      : allSkills.filter(
-          (skill) =>
-            skill.category === filter ||
-            (filter === "Database" && ["MongoDB", "MySQL"].includes(skill.name))
-        );
+      : allSkills.filter((skill) => skill.category === filter);
 
   return (
-  <section id="skills" className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="skills" className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -376,7 +349,7 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Skill Logos & Tools */}
+        {/* Skill Logos */}
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 mb-16">
           {displayedSkills.map((skill, idx) => (
             <div
@@ -395,7 +368,7 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Additional Skills */}
+        {/* Soft Skills */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-center mb-8">
             <span className="bg-gradient-to-r from-violet-300 via-purple-300 to-rose-300 bg-clip-text text-transparent">
@@ -404,14 +377,14 @@ const SkillsSection = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              'Problem Solving',
-              'Team Leadership',
-              'Project Management',
-              'Client Communication',
-              'Creative Thinking',
-              'Time Management',
-              'Continuous Learning',
-              'Agile Methodology',
+              "Problem Solving",
+              "Team Leadership",
+              "Project Management",
+              "Client Communication",
+              "Creative Thinking",
+              "Time Management",
+              "Continuous Learning",
+              "Agile Methodology",
             ].map((skill, index) => (
               <div
                 key={index}
