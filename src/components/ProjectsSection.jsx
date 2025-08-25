@@ -95,8 +95,10 @@ const ProjectsSection = () => {
     { id: 'all', name: 'Semua', count: projects.length },
     { id: 'fullstack', name: 'Full Stack', count: projects.filter(p => p.category === 'fullstack').length },
     { id: 'frontend', name: 'Frontend', count: projects.filter(p => p.category === 'frontend').length },
+    { id: 'backend', name: 'Backend', count: projects.filter(p => p.category === 'backend').length },
     { id: 'mobile', name: 'Mobile', count: projects.filter(p => p.category === 'mobile').length },
-    { id: 'design', name: 'Design', count: projects.filter(p => p.category === 'design').length }
+    { id: 'ui/ux&design', name: 'UI/UX & Design', count: projects.filter(p => p.category === 'ui/ux&design').length },
+    { id: 'digitalmarketing', name: 'Digital Marketing', count: projects.filter(p => p.category === 'digitalmarketing').length }
   ];
 
   const filteredProjects = activeFilter === 'all' 
@@ -156,54 +158,19 @@ const ProjectsSection = () => {
                   </div>
                 </div>
                 
-                <p className="text-slate-600 mb-4 text-sm leading-relaxed line-clamp-2">
+                <p className="text-slate-600 mb-4 text-sm leading-relaxed">
                   {project.description}
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.slice(0, 3).map((tech, techIndex) => (
+                  {project.tech.map((tech, techIndex) => (
                     <span key={techIndex} className="px-2 py-1 bg-purple-100 text-xs rounded text-purple-600">
                       {tech}
                     </span>
                   ))}
-                  {project.tech.length > 3 && (
-                    <span className="px-2 py-1 bg-slate-200 text-xs rounded text-slate-500">
-                      +{project.tech.length - 3}
-                    </span>
-                  )}
                 </div>
                 
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-3 text-xs text-slate-500">
-                    <span className="flex items-center gap-1">
-                      {/* Note: The 'Star' icon is missing from the imports. I've added a comment here. */}
-                      {/* You would need to import 'Star' from 'lucide-react' like the others. */}
-                      {/* <Star className="w-3 h-3" /> */}
-                      {project.stats.stars}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Eye className="w-3 h-3" />
-                      {project.stats.views}
-                    </span>
-                  </div>
-                  
-                  <div className="flex gap-3">
-                    <a 
-                      href={project.github}
-                      className="flex items-center gap-1 text-slate-500 hover:text-violet-500 transition-colors text-sm"
-                    >
-                      <Github className="w-3 h-3" />
-                      Code
-                    </a>
-                    <a 
-                      href={project.live}
-                      className="flex items-center gap-1 text-slate-500 hover:text-rose-500 transition-colors text-sm"
-                    >
-                      <ExternalLink className="w-3 h-3" />
-                      Live
-                    </a>
-                  </div>
-                </div>
+
               </div>
             </div>
           ))}
