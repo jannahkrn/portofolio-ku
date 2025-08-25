@@ -6,6 +6,8 @@ import {
   Palette,
   TrendingUp,
   Settings,
+  FileText,          // ✅ untuk Content Strategy
+  TabletSmartphone,  // ✅ untuk SEO/SEM
 } from "lucide-react";
 import {
   SiReact,
@@ -86,10 +88,10 @@ const SkillsSection = () => {
       />
     ),
     Prototyping: <SiProtonmail className="text-purple-500" />,
-    "SEO/SEM": <SiGoogleanalytics className="text-yellow-500" />,
+    "SEO/SEM": <TabletSmartphone className="text-indigo-500" />, // ✅ Tablet/iPad
     "Google Analytics": <SiGoogleanalytics className="text-yellow-500" />,
-    "Social Media Marketing": <SiFacebook className="text-blue-600" />,
-    "Content Strategy": <SiGmail className="text-red-500" />,
+    "Social Media Marketing": <Smartphone className="text-blue-500" />, // ✅ Smartphone
+    "Content Strategy": <FileText className="text-emerald-600" />, // ✅ Kertas/Dokumen
     "Facebook Ads": <SiFacebook className="text-blue-600" />,
     "Email Marketing": <SiGmail className="text-red-500" />,
     "Git & GitHub": <SiGithub className="text-gray-800" />,
