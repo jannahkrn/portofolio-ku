@@ -9,10 +9,12 @@ const EducationSection = () => {
       period: '2024 - Now',
       description: 'Specializing in software development, database management, and modern web technologies. Actively participated in several competitions, including design thinking, programming, web design, and business competitions, as well as being involved in student organizations and study groups.',
       achievements: [
-        'Back-end Developer Group Study Club', 
-        'Juara 2 Hackathon Campus 2022', 
-        'Asisten Praktikum Web Programming',
-        'Ketua Himpunan Mahasiswa Teknik Informatika'
+        'Chairman of Publications and Documentation, PaMTKla 2025 - 2026 Period',
+        'Member of Digistar Club, 2025', 
+        'Liaison Officer, ONION 13URN 2025', 
+        'Member of IoT, Chevalier Laboratory SAS 2024-2025 Period',
+        'Backend Developer, Chevalier Laboratory SAS 2024-2025 Period',
+        'Public Relation and Service, Marketing Crew 2024-2025 Period'
       ]
     },
     {
