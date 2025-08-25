@@ -18,6 +18,62 @@ const ExperienceSection = () => {
       ]
     },
     {
+      title: 'Liaison Officer',
+      organization: 'ONION 13URN',
+      location: 'Telkom University',
+      period: '2025',
+      type: 'Organisasi',
+      description: 'Served as a liaison officer for the ONION 13URN event, coordinating between participants and event organizers to ensure a smooth and successful experience.',
+      skills: ['Communication', 'Event Coordination', 'Problem Solving', 'Interpersonal Skills'],
+      achievements: [
+        'Facilitated communication for over 100 event participants',
+        'Resolved participant inquiries and issues promptly',
+        'Contributed to the positive atmosphere of the event'
+      ]
+    },
+    {
+      title: 'Member of Digistar Club',
+      organization: 'Digistar Club',
+      location: 'Telkom University',
+      period: '2025',
+      type: 'Organisasi',
+      description: 'Participated in various activities and workshops focused on digital technology and innovation, enhancing skills in software development and design.',
+      skills: ['Digital Technology', 'Software Development', 'Design Thinking', 'Collaboration'],
+      achievements: [
+        'Contributed to a team project on a mobile application',
+        'Attended workshops on AI and machine learning',
+        'Expanded professional network with peers and mentors'
+      ]
+    },
+    {
+      title: 'Backend Developer',
+      organization: 'Chevalier Laboratory SAS',
+      location: 'Telkom University',
+      period: '2024 - 2025',
+      type: 'Organisasi',
+      description: 'Developed and maintained the backend infrastructure for various projects within the laboratory. Focused on database management, API creation, and server-side logic.',
+      skills: ['Backend Development', 'Database Management', 'Node.js', 'REST API', 'IoT'],
+      achievements: [
+        'Implemented new API endpoints for data-driven applications',
+        'Optimized database queries to improve application performance',
+        'Collaborated with the frontend team to integrate new features'
+      ]
+    },
+    {
+      title: 'Member of IoT',
+      organization: 'Chevalier Laboratory SAS',
+      location: 'Telkom University',
+      period: '2024 - 2025',
+      type: 'Organisasi',
+      description: 'Contributed to research and development projects related to the Internet of Things (IoT). Involved in prototyping, data collection, and system integration.',
+      skills: ['IoT', 'Hardware Prototyping', 'System Integration', 'Data Analysis'],
+      achievements: [
+        'Assisted in the development of a smart home prototype',
+        'Collected and analyzed sensor data for a research project',
+        'Presented project findings at a university showcase'
+      ]
+    },
+    {
       title: 'Public Relation and Service',
       organization: 'Marketing Crew',
       location: 'Telkom University',
@@ -32,23 +88,9 @@ const ExperienceSection = () => {
       ]
     },
     {
-      title: 'Publication and Documentation Division',
-      organization: 'MPK SMA Negeri 1 Polanharjo',
-      location: 'Klaten, Indonesia',
-      period: '2021 - 2023',
-      type: 'Organisasi',
-      description: 'Responsible for all publication and documentation needs for school events and activities.',
-      skills: ['Content Creation', 'Photography', 'Videography', 'Event Documentation'],
-      achievements: [
-        'Documented more than 50 school events',
-        'Managed the school\'s official social media accounts',
-        'Created engaging visual content for school publications'
-      ]
-    },
-    {
       title: 'Mosque Affairs Division',
-      organization: 'Rohis SMA Negeri 1 Polanharjo',
-      location: 'Klaten, Indonesia',
+      organization: 'Kerohanian Islam',
+      location: 'SMA Negeri 1 Polanharjo',
       period: '2023 - 2024',
       type: 'Organisasi',
       description: 'Managed the day-to-day operations and activities of the mosque within the school, including event coordination and student religious programs.',
@@ -60,9 +102,23 @@ const ExperienceSection = () => {
       ]
     },
     {
+      title: 'Publication and Documentation Division',
+      organization: 'Majelis Perwakilan Kelas',
+      location: 'SMA Negeri 1 Polanharjo',
+      period: '2021 - 2023',
+      type: 'Organisasi',
+      description: 'Responsible for all publication and documentation needs for school events and activities.',
+      skills: ['Content Creation', 'Photography', 'Videography', 'Event Documentation'],
+      achievements: [
+        'Documented more than 50 school events',
+        'Managed the school\'s official social media accounts',
+        'Created engaging visual content for school publications'
+      ]
+    },
+    {
       title: 'Discipline Division',
-      organization: 'Rohis SMA Negeri 1 Polanharjo',
-      location: 'Klaten, Indonesia',
+      organization: 'Kerohanian Islam',
+      location: 'SMA Negeri 1 Polanharjo',
       period: '2021 - 2022',
       type: 'Organisasi',
       description: 'Helped maintain a disciplined and orderly environment for the organization\'s members and activities.',
@@ -72,64 +128,76 @@ const ExperienceSection = () => {
         'Assisted in the smooth execution of organizational events',
         'Resolved minor conflicts between members amicably'
       ]
+    },
+    {
+      title: 'Member of Computer Extracurricular Club',
+      organization: 'SMA Negeri 1 Polanharjo',
+      location: 'SMA Negeri 1 Polanharjo',
+      period: '2021 - 2022',
+      type: 'Organisasi',
+      description: 'Engaged in various computer-related activities, including programming contests and technology workshops. Developed foundational skills in coding and problem-solving.',
+      skills: ['Programming', 'Problem Solving', 'Teamwork', 'Basic Coding'],
+      achievements: [
+        'Participated in local and regional programming competitions',
+        'Helped organize a school-wide coding workshop',
+        'Contributed to a group project on a simple website'
+      ]
     }
   ];
 
   const experiences = [
     {
-      title: 'Frontend Developer',
-      company: 'Tech Startup Indonesia',
-      location: 'Jakarta, Indonesia',
-      period: '2023 - Present',
-      type: 'Part Time',
-      description: 'Developing responsive web applications using React and modern web technologies. Collaborated with design team to implement pixel-perfect UI components and optimize user experience.',
-      skills: ['React', 'TypeScript', 'Tailwind CSS', 'Git', 'Figma', 'REST API'],
-      achievements: [
-        'Meningkatkan performa aplikasi hingga 40%',
-        'Implementasi dark mode dan multi-language support',
-        'Mentoring 2 junior developer'
-      ]
-    },
-    {
-      title: 'Freelance UI/UX Designer',
-      company: 'Various Clients',
-      location: 'Remote',
-      period: '2022 - 2023',
-      type: 'Freelance',
-      description: 'Created brand identities, marketing materials, and digital designs for small to medium businesses. Managed multiple projects and maintained excellent client relationships.',
-      skills: ['Adobe Creative Suite', 'Figma', 'Sketch', 'Prototyping', 'User Research', 'Brand Design'],
-      achievements: [
-        'Menyelesaikan 15+ proyek dengan rating 5 bintang',
-        'Meningkatkan konversi client hingga 25%',
-        'Membangun portfolio client yang beragam'
-      ]
-    },
-    {
-      title: 'Digital Marketing Intern',
-      company: 'Creative Digital Agency',
-      location: 'Bandung, Indonesia',
-      period: '2021 - 2022',
+      title: 'Information Technology Staff',
+      company: 'Solo Technopark',
+      location: 'Surakarta, Central Java, Indonesia',
+      period: 'Jun 2025 - Present',
       type: 'Internship',
-      description: 'Assisted in digital marketing campaigns, social media management, and content creation. Analyzed campaign performance and provided actionable insights to improve ROI.',
-      skills: ['Social Media Marketing', 'Content Creation', 'Google Analytics', 'SEO', 'Facebook Ads', 'Copywriting'],
+      description: 'Coming Soon',
+      skills: ['Web Development', 'IT Support', 'Network Administration', 'Technical Troubleshooting'],
       achievements: [
-        'Mengelola 10+ akun media sosial client',
-        'Meningkatkan engagement rate rata-rata 35%',
-        'Membuat konten viral dengan 100K+ views'
+        'Coming Soon'
       ]
     },
     {
-      title: 'Web Development Tutor',
-      company: 'Campus Coding Bootcamp',
-      location: 'Jakarta, Indonesia',
-      period: '2022 - Present',
-      type: 'Part Time',
-      description: 'Teaching fundamental web development concepts to beginners. Creating curriculum and hands-on projects to help students build practical skills.',
-      skills: ['Teaching', 'Curriculum Development', 'HTML/CSS', 'JavaScript', 'React', 'Node.js'],
+      title: 'AI Trainer',
+      company: 'DataAnnotation',
+      location: 'New York, USA',
+      period: 'Mar 2025 - Present',
+      type: 'Freelance',
+      description: 'Responsible for training AI models to improve their performance and accuracy. My expertise includes AI Solutions, Generative AI, and AI-Driven Content.',
+      skills: ['Artificial Intelligence (AI)', 'AI Solutions', 'Generative AI', 'AI-Driven Content'],
       achievements: [
-        'Mengajar 50+ siswa dengan tingkat kepuasan 95%',
-        'Mengembangkan modul pembelajaran interaktif',
-        '80% siswa berhasil mendapat pekerjaan di bidang tech'
+        'Successfully trained multiple AI models with a high accuracy rate.',
+        'Provided critical feedback to improve AI model performance.',
+        'Contributed to the development of a more robust AI-driven content generation system.'
+      ]
+    },
+    {
+      title: 'Business Development',
+      company: 'GAOTek Inc.',
+      location: 'Manhattan, New York, USA',
+      period: 'Mar 2025 - Jul 2025',
+      type: 'Internship',
+      description: 'Assisted the business development team in various tasks, including market research, email marketing, and B2B marketing strategies.',
+      skills: ['Business Development', 'Email Marketing', 'B2B Marketing Strategy'],
+      achievements: [
+        'Conducted market research that identified new business opportunities.',
+        'Assisted in creating and optimizing email marketing campaigns.',
+        'Contributed to the development of a new B2B marketing strategy.'
+      ]
+    },
+    {
+      title: 'Web Design and Development',
+      company: 'TechnoHacks EduTech Official',
+      location: 'Remote',
+      period: 'Mar 2025 - May 2025',
+      type: 'Internship',
+      description: 'Gained hands-on experience in web design and development, focusing on UI/UX design and front-end implementation.',
+      skills: ['Web Design', 'Web Development', 'UI/UX Designer'],
+      achievements: [
+        'Designed and developed a responsive website mock-up.',
+        'Collaborated with the team to improve user interface designs.',
+        'Completed a project that demonstrated proficiency in web development principles.'
       ]
     }
   ];
@@ -185,23 +253,26 @@ const ExperienceSection = () => {
                 <p className="text-slate-600 leading-relaxed mb-4">{exp.description}</p>
                 
                 {/* Skills */}
-                <div className="mb-4">
-                  <h5 className="text-sm font-semibold text-slate-500 mb-2">
-                    {isOrganizational ? 'Skills:' : 'Tech Stack:'}
-                  </h5>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.skills.map((skill, skillIndex) => (
-                      <span 
-                        key={skillIndex} 
-                        className="px-3 py-1 bg-purple-100 text-xs rounded-full text-purple-600 hover:bg-purple-200 transition-colors"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                {exp.skills.length > 0 && (
+                  <div className="mb-4">
+                    <h5 className="text-sm font-semibold text-slate-500 mb-2">
+                      {isOrganizational ? 'Skills:' : 'Tech Stack:'}
+                    </h5>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.skills.map((skill, skillIndex) => (
+                        <span 
+                          key={skillIndex} 
+                          className="px-3 py-1 bg-purple-100 text-xs rounded-full text-purple-600 hover:bg-purple-200 transition-colors"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
                 
                 {/* Achievements */}
+                {exp.achievements.length > 0 && (
                 <div>
                   <h5 className="text-sm font-semibold text-rose-400 mb-2 flex items-center">
                     <Star className="w-4 h-4 mr-1" />
@@ -216,6 +287,7 @@ const ExperienceSection = () => {
                     ))}
                   </ul>
                 </div>
+                )}
               </div>
             </div>
           </div>
@@ -257,9 +329,9 @@ const ExperienceSection = () => {
           <div className="space-y-8">
             {orgExperiences.map((exp, index) => renderExperienceCard(exp, index, true))}
           </div>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
   );
 };
 
