@@ -9,8 +9,6 @@ import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
-// Kamu bisa menambahkan komponen lain seperti Skills, Projects, dan Contact di sini
-
 import './App.css'; // Pastikan file CSS utama diimpor
 
 function App() {
@@ -18,6 +16,7 @@ function App() {
   const sectionRefs = useRef({});
 
   // Fungsi untuk menggeser (scroll) ke bagian tertentu
+  // Fungsi ini sudah benar dan tidak perlu diubah
   const scrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
     if (sectionElement) {
@@ -26,6 +25,7 @@ function App() {
   };
 
   // Efek untuk melacak posisi scroll dan memperbarui menu aktif
+  // Logika IntersectionObserver juga sudah benar dan tidak perlu diubah
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -36,13 +36,12 @@ function App() {
         });
       },
       {
-        root: null, // Mengamati viewport
-        rootMargin: '-50% 0px -50% 0px', // Mengamati saat elemen berada di tengah viewport
+        root: null, 
+        rootMargin: '-50% 0px -50% 0px', 
         threshold: 0,
       }
     );
 
-    // Mengamati setiap bagian (section)
     ['hero', 'about', 'education', 'experience', 'skills', 'projects', 'contact', 'footer'].forEach(id => {
       const element = document.getElementById(id);
       if (element) {
@@ -51,7 +50,6 @@ function App() {
     });
 
     return () => {
-      // Membersihkan observer saat komponen dilepas
       ['hero', 'about', 'education', 'experience', 'skills', 'projects', 'contact', 'footer'].forEach(id => {
         const element = document.getElementById(id);
         if (element) {
@@ -67,6 +65,7 @@ function App() {
       
       <main>
         {/* Pastikan setiap komponen memiliki ID yang sesuai dengan yang di Navbar */}
+        {/* Tidak ada perubahan di sini karena CSS yang baru akan menangani perataan scroll */}
         <div id="hero">
           <HeroSection scrollToSection={scrollToSection} />
         </div>
