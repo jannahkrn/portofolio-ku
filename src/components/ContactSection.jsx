@@ -167,7 +167,7 @@ const ContactSection = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="Jane Doe"
+                    placeholder="Janjun"
                     className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
                     required
                   />
@@ -182,7 +182,7 @@ const ContactSection = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="jane.doe@example.com"
+                    placeholder="janjun@example.com"
                     className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
                     required
                   />
@@ -196,7 +196,7 @@ const ContactSection = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Hi! I have an exciting project idea for you."
+                    placeholder="HI JANJUNNN! Let us connect and collaborate on projects!"
                     className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
                     rows={5}
                     required
