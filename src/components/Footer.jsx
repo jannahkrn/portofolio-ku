@@ -8,6 +8,8 @@ import {
   Code,
   Palette,
   TrendingUp,
+  Instagram,
+  MessageCircle, // Change: Added MessageCircle
 } from "lucide-react";
 
 const Footer = () => {
@@ -55,8 +57,22 @@ const Footer = () => {
       name: "Email",
       icon: Mail,
       url: "mailto:jannahkurnia15@gmail.com",
-      color: "hover:text-green-400",
+      color: "hover:text-red-400",
       description: "Send a direct email",
+    },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      url: "https://www.instagram.com/jannahkrn_",
+      color: "hover:text-purple-400",
+      description: "Follow me on Instagram",
+    },
+    {
+      name: "WhatsApp",
+      icon: MessageCircle, // Change: Replaced Whatsapp with MessageCircle
+      url: "https://wa.me/6287847714840",
+      color: "hover:text-green-400",
+      description: "Chat with me on WhatsApp",
     },
   ];
 
@@ -72,7 +88,10 @@ const Footer = () => {
                 Fullstack Developer Portfolio
               </h3>
               <p className="text-gray-600 leading-relaxed max-w-md text-left">
-                A passionate student combining technical expertise in web development, creativity in design, and strategic insight in digital marketing to create innovative and impactful digital solutions.
+                A passionate student combining technical expertise in web
+                development, creativity in design, and strategic insight in
+                digital marketing to create innovative and impactful digital
+                solutions.
               </p>
             </div>
 
@@ -108,7 +127,9 @@ const Footer = () => {
                     title={social.description}
                     target={social.url.startsWith("http") ? "_blank" : "_self"}
                     rel={
-                      social.url.startsWith("http") ? "noopener noreferrer" : ""
+                      social.url.startsWith("http")
+                        ? "noopener noreferrer"
+                        : ""
                     }
                   >
                     <social.icon className="w-5 h-5" />
@@ -120,7 +141,9 @@ const Footer = () => {
 
           {/* Quick Links - tanpa kotak, underline putih saat hover */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-gray-800 text-left">Navigation</h4>
+            <h4 className="text-lg font-semibold mb-6 text-gray-800 text-left">
+              Navigation
+            </h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -137,7 +160,9 @@ const Footer = () => {
 
           {/* Contact Info rata kiri */}
           <div className="text-left">
-            <h4 className="text-lg font-semibold mb-6 text-gray-800">Contact</h4>
+            <h4 className="text-lg font-semibold mb-6 text-gray-800">
+              Contact
+            </h4>
             <div className="space-y-4">
               <div>
                 <p className="text-gray-500 text-sm mb-1">Email</p>
@@ -151,7 +176,9 @@ const Footer = () => {
 
               <div>
                 <p className="text-gray-500 text-sm mb-1">Location</p>
-                <p className="text-gray-700 text-sm">Bandung, West Java, Indonesia</p>
+                <p className="text-gray-700 text-sm">
+                  Bandung, West Java, Indonesia
+                </p>
               </div>
 
               <div>
@@ -179,9 +206,7 @@ const Footer = () => {
 
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-4 text-xs text-gray-400">
-                <span>
-                  Last updated: {new Date().toLocaleDateString("en-US")}
-                </span>
+                <span>Last updated: {new Date().toLocaleDateString("en-US")}</span>
               </div>
 
               <button
