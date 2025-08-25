@@ -56,7 +56,8 @@ import MeetLogo from "../assets/skill-logos/meet.png";
 import TeamsLogo from "../assets/skill-logos/teams.png";
 
 const SkillsSection = () => {
-  // Skill logo mapping (replace with actual logo imports or emoji for demo)
+  const [filter, setFilter] = useState("All");
+
   const skillLogos = {
     "React.js": <SiReact className="text-sky-500" />,
     "Vue.js": <SiVuedotjs className="text-green-500" />,
@@ -173,34 +174,9 @@ const SkillsSection = () => {
         className="inline"
       />
     ),
-    Notion: <img src={NotionLogo} alt="Notion" className="w-8 h-8 inline" />,
-    Postman: <img src={PostmanLogo} alt="Postman" className="w-8 h-8 inline" />,
-    "VS Code": (
-      <img src={VscodeLogo} alt="VS Code" className="w-8 h-8 inline" />
-    ),
-    Canva: <img src={CanvaLogo} alt="Canva" className="w-8 h-8 inline" />,
   };
 
-  const tools = [
-    { name: "Git & GitHub", icon: skillLogos["Git & GitHub"] },
-    { name: "Docker", icon: skillLogos["Docker"] },
-    { name: "AWS", icon: skillLogos["AWS"] },
-    { name: "Netlify/Vercel", icon: skillLogos["Netlify/Vercel"] },
-    { name: "CI/CD", icon: skillLogos["CI/CD"] },
-    { name: "Linux", icon: skillLogos["Linux"] },
-    { name: "VS Code", icon: skillLogos["VS Code"] },
-    { name: "Postman", icon: skillLogos["Postman"] },
-    { name: "Chrome DevTools", icon: "🔍" },
-    { name: "Notion", icon: skillLogos["Notion"] },
-    { name: "Slack", icon: "💬" },
-    { name: "Trello", icon: "📋" },
-    { name: "Word", icon: skillLogos["Word"] },
-    { name: "Excel", icon: skillLogos["Excel"] },
-    { name: "PowerPoint", icon: skillLogos["PowerPoint"] },
-    { name: "Google Meet", icon: skillLogos["Google Meet"] },
-    { name: "Microsoft Teams", icon: skillLogos["Microsoft Teams"] },
-  ];
-
+  // Perbaikan: Pisahkan Backend dan Database ke dalam dua kategori terpisah
   const skillCategories = [
     {
       title: "Frontend Development",
@@ -232,9 +208,17 @@ const SkillsSection = () => {
         { name: "Express.js" },
         { name: "Python" },
         { name: "PHP" },
-        { name: "MongoDB" },
-        { name: "MySQL" },
       ],
+    },
+    {
+      title: "Database",
+      icon: Database,
+      color: "from-yellow-200 to-orange-200",
+      textColor: "text-yellow-600",
+      borderColor: "border-yellow-100",
+      hoverBorder: "hover:border-yellow-200",
+      bgColor: "bg-yellow-50",
+      skills: [{ name: "MongoDB" }, { name: "MySQL" }],
     },
     {
       title: "Mobile Development",
@@ -253,7 +237,7 @@ const SkillsSection = () => {
       ],
     },
     {
-      title: "UI/UX Design",
+      title: "UI/UX Design and Grafis",
       icon: Palette,
       color: "from-purple-200 to-violet-200",
       textColor: "text-purple-600",
@@ -306,45 +290,50 @@ const SkillsSection = () => {
     },
   ];
 
-  // Gabungkan semua skill dari skillCategories dan tools ke allSkills tanpa duplikat
+  const tools = [
+    { name: "Notion", icon: skillLogos.Notion },
+    { name: "Postman", icon: skillLogos.Postman },
+    { name: "VS Code", icon: skillLogos["VS Code"] },
+    { name: "Word", icon: skillLogos.Word },
+    { name: "Excel", icon: skillLogos.Excel },
+    { name: "PowerPoint", icon: skillLogos.PowerPoint },
+    { name: "Google Meet", icon: skillLogos["Google Meet"] },
+    { name: "Microsoft Teams", icon: skillLogos["Microsoft Teams"] },
+    { name: "Chrome DevTools", icon: "🔍" },
+    { name: "Slack", icon: "💬" },
+    { name: "Trello", icon: "📋" },
+  ];
+
   const allSkillsRaw = [
     ...skillCategories.flatMap((cat) =>
       cat.skills.map((skill) => ({ ...skill, category: cat.title }))
     ),
-    ...tools.map((tool) => ({ name: tool.name, icon: tool.icon, category: "DevOps & Tools" })),
+    ...tools.map((tool) => ({ ...tool, category: "DevOps & Tools" })),
   ];
-  const allSkills = allSkillsRaw.filter((skill, idx, arr) =>
-    arr.findIndex((s) => s.name === skill.name) === idx
+
+  const allSkills = allSkillsRaw.filter(
+    (skill, idx, arr) => arr.findIndex((s) => s.name === skill.name) === idx
   );
 
-  // Filter state
-  const [filter, setFilter] = useState("All");
-
-  // Button categories
   const filterButtons = [
     { label: "All", key: "All" },
     { label: "Front End", key: "Frontend Development" },
     { label: "Back End", key: "Backend Development" },
+    { label: "Mobile", key: "Mobile Development" },
     { label: "Database", key: "Database" },
     { label: "Tools", key: "DevOps & Tools" },
-    { label: "UI/UX", key: "UI/UX Design" },
+    { label: "UI/UX", key: "UI/UX Design and Grafis" },
     { label: "Digital Marketing", key: "Digital Marketing" },
   ];
 
-  // Gabungkan tools ke dalam filter 'Tools'
+  // Perbaikan: Logika filter yang lebih sederhana
   const displayedSkills =
     filter === "All"
       ? allSkills
-      : filter === "DevOps & Tools"
-      ? tools.map((tool) => ({ ...tool, category: "DevOps & Tools" }))
-      : allSkills.filter(
-          (skill) =>
-            skill.category === filter ||
-            (filter === "Database" && ["MongoDB", "MySQL"].includes(skill.name))
-        );
+      : allSkills.filter((skill) => skill.category === filter);
 
   return (
-  <section id="skills" className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="skills" className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -404,14 +393,14 @@ const SkillsSection = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              'Problem Solving',
-              'Team Leadership',
-              'Project Management',
-              'Client Communication',
-              'Creative Thinking',
-              'Time Management',
-              'Continuous Learning',
-              'Agile Methodology',
+              "Problem Solving",
+              "Team Leadership",
+              "Project Management",
+              "Client Communication",
+              "Creative Thinking",
+              "Time Management",
+              "Continuous Learning",
+              "Agile Methodology",
             ].map((skill, index) => (
               <div
                 key={index}
