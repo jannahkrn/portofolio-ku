@@ -11,9 +11,9 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const serviceId = 'service_l5sjkhq'; // Ganti dengan Service ID Anda
-    const templateId = 'template_susburu'; // Ganti dengan Template ID Anda
-    const publicKey = 'njdBF3XdYR4aFXzRt'; // Ganti dengan Public Key Anda
+    const serviceId = 'service_l5sjkhq'; 
+    const templateId = 'template_susburu'; 
+    const publicKey = 'njdBF3XdYR4aFXzRt'; 
 
     emailjs.sendForm(serviceId, templateId, form.current, publicKey)
       .then((result) => {
