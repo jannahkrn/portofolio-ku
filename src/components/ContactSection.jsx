@@ -220,11 +220,11 @@ const ContactSection = () => {
                   <p className="text-gray-600 text-sm text-center">Avg Response</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-3xl font-bold text-red-600">50+</span>
+                  <span className="text-3xl font-bold text-red-600">5+</span>
                   <p className="text-gray-600 text-sm text-center">Projects Done</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-3xl font-bold text-orange-600">3+</span>
+                  <span className="text-3xl font-bold text-orange-600">1+</span>
                   <p className="text-gray-600 text-sm text-center">Years Experience</p>
                 </div>
               </div>
