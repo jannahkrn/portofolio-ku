@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { Github, ExternalLink, Calendar, Users, Eye } from 'lucide-react';
 
+// Import semua gambar proyek yang ada
+import mdhImage from '../assets/project/mdh.png';
+import sportareaImage from '../assets/project/sportarea.png';
+import battlediceImage from '../assets/project/battledice.png';
+import biteImage from '../assets/project/bite.png';
+import etherealStoreImage from '../assets/project/etherealstore.png';
+
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
@@ -10,7 +17,7 @@ const ProjectsSection = () => {
       title: 'Mandiri Digipreneur Hub-Solo Technopark',
       category: 'web-dev',
       description: 'A reservation system for MDH facilities (podcast rooms, coworking spaces, classrooms). The system includes features for national holidays and admin data export to Excel.',
-      image: 'src/assets/project/mdh.png',
+      image: mdhImage,
       tech: ['React', 'Tailwind CSS', 'JavaScript', 'Node.js', 'Express', 'Vite', 'MySQL', 'Prisma', 'Axios', 'JWT', 'Google Cloud Console', 'Google Calender API', 'Excel'],
       github: '#',
       live: '#',
@@ -22,7 +29,7 @@ const ProjectsSection = () => {
       title: 'Sport Area-Solo Technopark',
       category: 'web-dev',
       description: 'A web application for booking futsal and basketball courts at Solo Technopark, allowing users to check availability and make reservations.',
-      image: 'src/assets/project/sportarea.png',
+      image: sportareaImage,
       tech: ['React', 'Tailwind CSS', 'JavaScript', 'Node.js', 'Express', 'Vite', 'MySQL', 'Prisma', 'Axios', 'JWT'],
       github: '#',
       live: '#',
@@ -34,7 +41,7 @@ const ProjectsSection = () => {
       title: 'Battle Dice',
       category: 'web-dev',
       description: 'A thrilling turn-based game where strategy meets luck. Players engage in tactical combat with progressive enemy unlocks and a global leaderboard.',
-      image: 'src/assets/project/battledice.png',
+      image: battlediceImage,
       tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
       github: '#',
       live: '#',
@@ -46,7 +53,7 @@ const ProjectsSection = () => {
       title: 'BITE - Sweet Treats Website',
       category: 'web-dev',
       description: 'A website dedicated to showcasing a wide variety of sweet treats, from pastries to chocolates, with an intuitive and user-friendly interface.',
-      image: 'src/assets/project/bite.png',
+      image: biteImage,
       tech: ['HTML', 'CSS', 'JavaScript', 'PHP'],
       github: '#',
       live: '#',
@@ -58,7 +65,7 @@ const ProjectsSection = () => {
       title: 'Ethereal Store. Id',
       category: 'ui-ux',
       description: 'UI/UX design for an e-commerce platform specializing in fashion. The design focuses on a seamless and modern shopping experience.',
-      image: 'src/assets/project/etherealstore.png',
+      image: etherealStoreImage,
       tech: ['Figma', 'Canva', 'Prototyping', 'UI/UX Design'],
       github: '#',
       live: '#',
@@ -90,11 +97,9 @@ const ProjectsSection = () => {
   ];
 
   const filteredProjects = projects.filter(project => {
-    // Saring proyek 'coming-soon' jika filter yang aktif adalah 'all'
     if (activeFilter === 'all' && project.image === 'coming-soon') {
       return false;
     }
-    // Tampilkan semua proyek jika filter 'all' aktif, atau tampilkan proyek yang sesuai dengan kategori yang dipilih
     return activeFilter === 'all' || project.category === activeFilter;
   });
 
@@ -108,7 +113,7 @@ const ProjectsSection = () => {
             </span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-           A collection of projects I have worked on with various technologies and levels of complexity.
+            A collection of projects I have worked on with various technologies and levels of complexity.
           </p>
         </div>
 
@@ -135,10 +140,10 @@ const ProjectsSection = () => {
             <div key={project.id} className="bg-violet-50 rounded-lg overflow-hidden border border-violet-100 hover:border-violet-200 transition-all group hover:transform hover:scale-105 shadow-sm hover:shadow-md">
               {project.image === 'coming-soon' ? (
                 <div className="relative w-full h-full p-8 flex flex-col items-center justify-center text-center">
-                    <h3 className="text-3xl sm:text-4xl font-semibold text-violet-500 mb-4">Coming Soon!</h3>
-                    <p className="text-sm sm:text-base text-slate-400 max-w-sm">
-                        {project.description}
-                    </p>
+                  <h3 className="text-3xl sm:text-4xl font-semibold text-violet-500 mb-4">Coming Soon!</h3>
+                  <p className="text-sm sm:text-base text-slate-400 max-w-sm">
+                      {project.description}
+                  </p>
                 </div>
               ) : (
                 <>
