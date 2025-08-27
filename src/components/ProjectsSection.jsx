@@ -7,18 +7,30 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'BITE - Sweet Treats Website',
+      title: 'Mandiri Digipreneur Hub-Solo Technopark',
       category: 'web-dev',
-      description: 'A website dedicated to showcasing a wide variety of sweet treats, from pastries to chocolates, with an intuitive and user-friendly interface.',
-      image: 'src/assets/project/bite.png',
-      tech: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+      description: 'A reservation system for MDH facilities (podcast rooms, coworking spaces, classrooms). The system includes features for national holidays and admin data export to Excel.',
+      image: 'src/assets/project/mdh.png',
+      tech: ['React', 'Tailwind CSS', 'JavaScript', 'Node.js', 'Express', 'Vite', 'MySQL', 'Prisma', 'Axios', 'JWT', 'Google Cloud Console', 'Google Calender API', 'Excel'],
       github: '#',
       live: '#',
-      date: 'Jun 2025',
-      team: 2
+      date: 'Aug 2025',
+      team: 3
     },
     {
       id: 2,
+      title: 'Sport Area-Solo Technopark',
+      category: 'web-dev',
+      description: 'A web application for booking futsal and basketball courts at Solo Technopark, allowing users to check availability and make reservations.',
+      image: 'src/assets/project/sportarea.png',
+      tech: ['React', 'Tailwind CSS', 'JavaScript', 'Node.js', 'Express', 'Vite', 'MySQL', 'Prisma', 'Axios', 'JWT'],
+      github: '#',
+      live: '#',
+      date: 'Jul 2025',
+      team: 3
+    },
+    {
+      id: 3,
       title: 'Battle Dice',
       category: 'web-dev',
       description: 'A thrilling turn-based game where strategy meets luck. Players engage in tactical combat with progressive enemy unlocks and a global leaderboard.',
@@ -30,28 +42,16 @@ const ProjectsSection = () => {
       team: 1
     },
     {
-      id: 3,
-      title: 'Sport Area Solo Technopark',
-      category: 'web-dev',
-      description: 'A web application for booking futsal and basketball courts at Solo Technopark, allowing users to check availability and make reservations.',
-      image: 'src/assets/project/sportarea.png',
-      tech: ['HTML', 'CSS', 'JavaScript', 'PHP'],
-      github: '#',
-      live: '#',
-      date: 'Jul 2025',
-      team: 3
-    },
-    {
       id: 4,
-      title: 'Mandiri Digipreneur Hub Solo Technopark',
+      title: 'BITE - Sweet Treats Website',
       category: 'web-dev',
-      description: 'A reservation system for MDH facilities (podcast rooms, coworking spaces, classrooms). The system includes features for national holidays and admin data export to Excel.',
-      image: 'src/assets/project/mdh.png',
+      description: 'A website dedicated to showcasing a wide variety of sweet treats, from pastries to chocolates, with an intuitive and user-friendly interface.',
+      image: 'src/assets/project/bite.png',
       tech: ['HTML', 'CSS', 'JavaScript', 'PHP'],
       github: '#',
       live: '#',
-      date: 'Jul 2025',
-      team: 3
+      date: 'Jan 2025',
+      team: 2
     },
     {
       id: 5,
@@ -62,7 +62,7 @@ const ProjectsSection = () => {
       tech: ['Figma', 'Canva', 'Prototyping', 'UI/UX Design'],
       github: '#',
       live: '#',
-      date: 'Jan 2024',
+      date: 'Des 2024',
       team: 1
     },
     {
