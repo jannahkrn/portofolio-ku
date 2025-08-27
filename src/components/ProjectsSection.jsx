@@ -108,7 +108,7 @@ const ProjectsSection = () => {
             </span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Koleksi proyek yang telah saya kerjakan dengan berbagai teknologi dan tingkat kompleksitas
+           A collection of projects I have worked on with various technologies and levels of complexity.
           </p>
         </div>
 
@@ -179,7 +179,7 @@ const ProjectsSection = () => {
         {/* CTA Section */}
         <div className="text-center mt-16">
           <p className="text-slate-500 mb-6">
-            Ingin melihat lebih banyak proyek atau berkolaborasi dalam proyek baru?
+            Want to see more projects or collaborate on new ones?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
@@ -189,13 +189,13 @@ const ProjectsSection = () => {
               className="px-8 py-3 bg-gradient-to-r from-violet-200 to-purple-200 text-violet-700 rounded-full font-semibold hover:from-violet-300 hover:to-purple-300 transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
             >
               <Github className="w-5 h-5" />
-              Lihat Semua di GitHub
+              See All on GitHub
             </a>
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-3 border-2 border-rose-200 text-rose-600 rounded-full font-semibold hover:border-rose-300 hover:bg-rose-50 transition-all shadow-sm hover:shadow-md"
             >
-              Mulai Proyek Bersama
+              Start a Joint Project
             </button>
           </div>
         </div>
