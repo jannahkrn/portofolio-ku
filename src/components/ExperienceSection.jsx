@@ -203,16 +203,23 @@ const ExperienceSection = () => {
       title: "Information Technology Staff",
       company: "Solo Technopark",
       location: "Surakarta, Central Java, Indonesia",
-      period: "Jun 2025 - Present",
+      period: "Jun 2025 - August 2025",
       type: "Internship",
-      description: "Coming Soon",
+      description:
+        "Contributed to the development of several web-based platforms, provided IT support, and assisted in ensuring reliable technical operations. Also involved in coordinating and supporting technology aspects for internal and external events.",
       skills: [
         "Web Development",
         "IT Support",
         "Network Administration",
         "Technical Troubleshooting",
+        "Event Coordination",
+        "UI/UX Evaluation",
       ],
-      achievements: ["Coming Soon"],
+      achievements: [
+        "Contributed to the development of multiple websites, including platforms for reservations and event management.",
+        "Supported and coordinated technical aspects of the Solo Techno Digital Day event.",
+        "Served as Technical Coordinator and Jury for the UI/UX Design Competition at Solo Techno Digital Day.",
+      ],
     },
     {
       title: "AI Trainer",
