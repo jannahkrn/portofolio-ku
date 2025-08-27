@@ -213,12 +213,12 @@ const ExperienceSection = () => {
         "Network Administration",
         "Technical Troubleshooting",
         "Event Coordination",
-        "UI/UX Evaluation",
+        "UI/UX",
       ],
       achievements: [
         "Contributed to the development of multiple websites, including platforms for reservations and event management.",
         "Supported and coordinated technical aspects of the Solo Techno Digital Day event.",
-        "Served as Technical Coordinator and Jury for the UI/UX Design Competition at Solo Techno Digital Day.",
+        "Served as Technical Coordinator and Jury for the UI/UX Design Competition at Solo Techno Digital Day 2025.",
       ],
     },
     {
