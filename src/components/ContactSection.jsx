@@ -96,7 +96,7 @@ const ContactSection = () => {
               Let's Collaborate
             </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Have an exciting project idea? Or want to collaborate? Don't hesitate to contact me.
             I'm ready to help bring your digital vision to life!
           </p>
