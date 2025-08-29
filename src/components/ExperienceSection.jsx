@@ -392,7 +392,7 @@ const ExperienceSection = () => {
               Experience
             </span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <p className="text-slate-600 max-w-2xl mx-auto">
             My professional journey and organizational involvement in
             technology, design, and leadership.
           </p>
