@@ -112,7 +112,7 @@ const ProjectsSection = () => {
               Portfolio Proyek
             </span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <p className="text-slate-600 max-w-2xl mx-auto">
             A collection of projects I have worked on with various technologies and levels of complexity.
           </p>
         </div>
