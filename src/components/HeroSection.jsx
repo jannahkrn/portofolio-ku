@@ -24,7 +24,7 @@ const HeroSection = ({ scrollToSection }) => {
               Jannah Kurniawati
             </span>
           </h1>
-          <p className="text-xl sm:text-1xl text-slate-400 mb-8 max-w-3xl mr-auto leading-relaxed">
+          <p className="text-xl sm:text-1xl text-slate-600 mb-8 max-w-3xl mr-auto leading-relaxed">
             I am a dedicated student with a strong commitment to both education and work. I have a great passion for integrating technology, design, and marketing to support the growth of a creative and intelligent young IT generation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-start items-center">
