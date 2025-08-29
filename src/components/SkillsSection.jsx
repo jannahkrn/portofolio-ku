@@ -327,7 +327,7 @@ const SkillsSection = () => {
               Skills and Technology
             </span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <p className="text-slate-600 max-w-2xl mx-auto">
             Technologies, tools, and skills that I master in application
             development
           </p>
