@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import profileImg from '../assets/profile.jpg';
+import robloxImg from '../assets/roblox.png';
 
 const HeroSection = ({ scrollToSection }) => {
   return (
@@ -44,7 +45,7 @@ const HeroSection = ({ scrollToSection }) => {
         </div>
         
         {/* Photo on the right */}
-        <div className="flex-1 flex justify-center md:justify-end mt-10 md:mt-0">
+        <div className="flex-1 flex justify-center md:justify-end mt-10 md:mt-0 relative">
           <div className="relative w-64 h-80 md:w-72 md:h-96 flex items-center justify-center">
             {/* Decorative frame with soft gradient */}
             <div className="relative w-full h-full rounded-3xl p-1 bg-gradient-to-r from-purple-200 via-lavender-300 to-peach-200 flex items-center justify-center overflow-hidden shadow-xl">
@@ -61,6 +62,14 @@ const HeroSection = ({ scrollToSection }) => {
             {/* Floating hearts/stars decoration */}
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-lavender-300 to-purple-300 rounded-full opacity-60 animate-bounce"></div>
             <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-peach-300 to-cream-300 rounded-full opacity-50 animate-pulse"></div>
+
+            {/* Karakter Roblox di dekat foto */}
+            <img
+              src={robloxImg}
+              alt="Roblox Character"
+              className="absolute w-48 h-48 md:w-56 md:h-56 -top-5 -left-24 animate-float" /* Digeser lebih ke kiri */
+              style={{ zIndex: 3 }}
+            />
           </div>
         </div>
       </div>
