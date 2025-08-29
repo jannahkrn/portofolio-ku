@@ -21,7 +21,7 @@ const Navbar = ({ activeSection, scrollToSection }) => {
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
                   className={`relative px-3 py-2 text-sm font-medium transition-colors outline-none shadow-none focus:outline-none focus:ring-0 active:outline-none active:ring-0
-                    text-slate-400 hover:text-violet-400 hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:-bottom-1 hover:after:h-0.5 hover:after:bg-violet-300 hover:after:rounded-full hover:after:content-[""] active:text-violet-400 active:after:absolute active:after:left-0 active:after:right-0 active:after:-bottom-1 active:after:h-0.5 active:after:bg-violet-300 active:after:rounded-full active:after:content-[""]
+                    text-slate-600 hover:text-violet-400 hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:-bottom-1 hover:after:h-0.5 hover:after:bg-violet-300 hover:after:rounded-full hover:after:content-[""] active:text-violet-400 active:after:absolute active:after:left-0 active:after:right-0 active:after:-bottom-1 active:after:h-0.5 active:after:bg-violet-300 active:after:rounded-full active:after:content-[""]
                   `}
                   style={{ background: 'none', border: 'none', boxShadow: 'none' }}
                 >
