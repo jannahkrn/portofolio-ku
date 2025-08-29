@@ -80,7 +80,7 @@ const EducationSection = () => {
                   <div className="bg-rose-50 p-6 rounded-lg border border-rose-100 hover:border-rose-200 transition-all shadow-sm hover:shadow-md text-left">
                     <h5 className="font-semibold mb-4 text-rose-400 flex items-center">
                       <Award className="w-5 h-5 mr-2" />
-                      Pencapaian & Aktivitas
+                      Achievements and Activities
                     </h5>
                     <ul className="space-y-3 pl-4">
                       {edu.achievements.map((achievement, achIndex) => (
