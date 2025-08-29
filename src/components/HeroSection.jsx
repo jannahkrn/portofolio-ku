@@ -67,7 +67,7 @@ const HeroSection = ({ scrollToSection }) => {
             <img
               src={robloxImg}
               alt="Roblox Character"
-              className="absolute w-50 h-50 md:w-60 md:h-60 -top-5 -left-24 animate-float" /* Digeser lebih ke kiri */
+              className="absolute w-48 h-48 md:w-56 md:h-56 -top-5 -left-24 animate-float" /* Digeser lebih ke kiri */
               style={{ zIndex: 3 }}
             />
           </div>
