@@ -42,7 +42,7 @@ const EducationSection = () => {
               Education
             </span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <p className="text-slate-600 max-w-2xl mx-auto">
             My academic journey and educational achievements.
           </p>
         </div>
