@@ -7,7 +7,7 @@ const ExperienceSection = () => {
       title: "Chairman of Publications and Documentation",
       organization: "PaMTKla",
       location: "Telkom University",
-      period: "2025 - 2026",
+      period: "Aug 2025 - Present",
       type: "Organisasi",
       description:
         "Responsible for leading the publications and documentation division, managing content creation, and documenting events for the organization.",
@@ -27,7 +27,7 @@ const ExperienceSection = () => {
       title: "Liaison Officer",
       organization: "ONION 13URN",
       location: "Telkom University",
-      period: "2025",
+      period: "Jul 2025 - Present",
       type: "Organisasi",
       description:
         "Served as a liaison officer for the ONION 13URN event, coordinating between participants and event organizers to ensure a smooth and successful experience.",
@@ -47,7 +47,7 @@ const ExperienceSection = () => {
       title: "Member of Digistar Club",
       organization: "Digistar Club",
       location: "Telkom University",
-      period: "2025",
+      period: "Mar 2025 - Present",
       type: "Organisasi",
       description:
         "Actively joined webinars and seminars organized by Digistar Club to broaden knowledge in digital technology, while building connections with peers and professionals.",
@@ -59,33 +59,10 @@ const ExperienceSection = () => {
       ],
     },
     {
-      title: "Backend Developer",
-      organization: "Chevalier Laboratory SAS",
-      location: "Telkom University",
-      period: "2024 - 2025",
-      type: "Organisasi",
-      description:
-        "Developed and maintained the backend infrastructure for various projects within the laboratory. Focused on database management, API creation, and server-side logic.",
-      skills: [
-        "Backend Development",
-        "Database Management",
-        "Node.js",
-        "REST API",
-        "Laravel",
-        "Php",
-      ],
-      achievements: [
-        "Implemented new API endpoints for data-driven applications",
-        "Optimized database queries to improve application performance",
-        "Collaborated with the frontend team to integrate new features",
-        "Complete the final project on time and well.",
-      ],
-    },
-    {
       title: "Member of IoT",
       organization: "Chevalier Laboratory SAS",
       location: "Telkom University",
-      period: "2024 - 2025",
+      period: "Feb 2025 - Present",
       type: "Organisasi",
       description:
         "Studied IoT concepts and practices through modules provided by Chevalier Laboratory SAS, focusing on understanding system design, prototyping basics, and data utilization.",
@@ -102,10 +79,37 @@ const ExperienceSection = () => {
       ],
     },
     {
+      title: "Backend Developer",
+      organization: "Chevalier Laboratory SAS",
+      location: "Telkom University",
+      period: "Nov 2024 - Present",
+      type: "Organisasi",
+      description:
+        "Developed and maintained the backend infrastructure for various projects within the laboratory. Focused on database management, API creation, and server-side logic.",
+      skills: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Git and Github",
+        "Backend Development",
+        "Database Management",
+        "Node.js",
+        "REST API",
+        "Laravel",
+        "Php",
+      ],
+      achievements: [
+        "Implemented new API endpoints for data-driven applications",
+        "Optimized database queries to improve application performance",
+        "Collaborated with the frontend team to integrate new features",
+        "Complete the final project on time and well.",
+      ],
+    },
+    {
       title: "Public Relation and Service",
       organization: "Marketing Crew",
       location: "Telkom University",
-      period: "2024 - 2025",
+      period: "Nov 2024 - Present",
       type: "Organisasi",
       description:
         "Handled public relations and provided services to support marketing activities for various university events and programs.",
@@ -123,7 +127,7 @@ const ExperienceSection = () => {
     },
     {
       title: "Mosque Affairs Division",
-      organization: "Kerohanian Islam",
+      organization: "Islamic Spirituality Organization",
       location: "SMA Negeri 1 Polanharjo",
       period: "2023 - 2024",
       type: "Organisasi",
@@ -143,7 +147,7 @@ const ExperienceSection = () => {
     },
     {
       title: "Publication and Documentation Division",
-      organization: "Majelis Perwakilan Kelas",
+      organization: "Student Representative Council",
       location: "SMA Negeri 1 Polanharjo",
       period: "2021 - 2023",
       type: "Organisasi",
@@ -163,7 +167,7 @@ const ExperienceSection = () => {
     },
     {
       title: "Discipline Division",
-      organization: "Kerohanian Islam",
+      organization: "Islamic Spirituality Organization",
       location: "SMA Negeri 1 Polanharjo",
       period: "2021 - 2022",
       type: "Organisasi",
@@ -183,7 +187,7 @@ const ExperienceSection = () => {
     },
     {
       title: "Member of Computer Extracurricular Club",
-      organization: "SMA Negeri 1 Polanharjo",
+      organization: "Computer Extracurricular Club",
       location: "SMA Negeri 1 Polanharjo",
       period: "2021 - 2022",
       type: "Organisasi",
@@ -199,6 +203,26 @@ const ExperienceSection = () => {
   ];
 
   const experiences = [
+     {
+      title: "AI Trainer",
+      company: "DataAnnotation",
+      location: "New York, USA",
+      period: "Mar 2025 - Present",
+      type: "Freelance",
+      description:
+        "Responsible for training AI models to improve their performance and accuracy. My expertise includes AI Solutions, Generative AI, and AI-Driven Content.",
+      skills: [
+        "Artificial Intelligence (AI)",
+        "AI Solutions",
+        "Generative AI",
+        "AI-Driven Content",
+      ],
+      achievements: [
+        "Successfully trained multiple AI models with a high accuracy rate.",
+        "Provided critical feedback to improve AI model performance.",
+        "Contributed to the development of a more robust AI-driven content generation system.",
+      ],
+    },
     {
       title: "Information Technology Staff",
       company: "Solo Technopark",
@@ -219,26 +243,6 @@ const ExperienceSection = () => {
         "Contributed to the development of multiple websites, including platforms for reservations and event management.",
         "Supported and coordinated technical aspects of the Solo Techno Digital Day event.",
         "Served as Technical Coordinator and Jury for the UI/UX Design Competition at Solo Techno Digital Day 2025.",
-      ],
-    },
-    {
-      title: "AI Trainer",
-      company: "DataAnnotation",
-      location: "New York, USA",
-      period: "Mar 2025 - Present",
-      type: "Freelance",
-      description:
-        "Responsible for training AI models to improve their performance and accuracy. My expertise includes AI Solutions, Generative AI, and AI-Driven Content.",
-      skills: [
-        "Artificial Intelligence (AI)",
-        "AI Solutions",
-        "Generative AI",
-        "AI-Driven Content",
-      ],
-      achievements: [
-        "Successfully trained multiple AI models with a high accuracy rate.",
-        "Provided critical feedback to improve AI model performance.",
-        "Contributed to the development of a more robust AI-driven content generation system.",
       ],
     },
     {
