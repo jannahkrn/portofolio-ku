@@ -11,7 +11,7 @@ const AboutSection = () => {
               About Me
             </span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <p className="text-slate-600 max-w-2xl mx-auto">
             Building the Future of IT with Technology, Design, and Marketing for Creativity
           </p>
         </div>
@@ -61,22 +61,22 @@ const AboutSection = () => {
                 <div className="text-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   <Code className="w-12 h-12 text-violet-400 mx-auto mb-2" />
                   <h4 className="font-semibold text-violet-600">Development</h4>
-                  <p className="text-sm text-slate-500">Full Stack</p>
+                  <p className="text-sm text-slate-600">Full Stack</p>
                 </div>
                 <div className="text-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   <Palette className="w-12 h-12 text-purple-400 mx-auto mb-2" />
                   <h4 className="font-semibold text-purple-600">Design</h4>
-                  <p className="text-sm text-slate-500">UI/UX & Grafis</p>
+                  <p className="text-sm text-slate-600">UI/UX & Grafis</p>
                 </div>
                 <div className="text-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   <TrendingUp className="w-12 h-12 text-rose-400 mx-auto mb-2" />
                   <h4 className="font-semibold text-rose-600">Marketing</h4>
-                  <p className="text-sm text-slate-500">Digital Strategy</p>
+                  <p className="text-sm text-slate-600">Digital Strategy</p>
                 </div>
                 <div className="text-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   <Globe className="w-12 h-12 text-indigo-400 mx-auto mb-2" />
                   <h4 className="font-semibold text-indigo-600">Web Tech</h4>
-                  <p className="text-sm text-slate-500">Modern Stack</p>
+                  <p className="text-sm text-slate-600">Modern Stack</p>
                 </div>
               </div>
             </div>
