@@ -2,6 +2,7 @@ import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import profileImg from '../assets/profile.jpg';
 import robloxImg from '../assets/roblox.png';
+import cvFile from '../assets/CV JANNAH.pdf';
 
 const HeroSection = ({ scrollToSection }) => {
   return (
@@ -39,6 +40,13 @@ const HeroSection = ({ scrollToSection }) => {
             >
               Contact Me
             </button>
+            <a
+              href={cvFile}
+              download="CV_JANNAH.pdf"
+              className="px-8 py-3 bg-gradient-to-r from-indigo-200 to-blue-200 text-indigo-700 rounded-full font-semibold hover:from-indigo-300 hover:to-blue-300 transition-all transform hover:scale-105 shadow-lg hover:shadow-indigo-100 flex items-center justify-center"
+            >
+              CV
+            </a>
           </div>
         </div>
 
@@ -71,7 +79,7 @@ const HeroSection = ({ scrollToSection }) => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <ChevronDown className="w-6 h-6 text-purple-400" />
       </div>
-    </section>
+    </section >
   );
 };
 
