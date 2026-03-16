@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Github, ExternalLink, Calendar, Users, Eye } from 'lucide-react';
 
-// Import semua gambar proyek yang ada
 import mdhImage from '../assets/project/mdh.png';
 import sportareaImage from '../assets/project/sportarea.png';
 import battlediceImage from '../assets/project/battledice.png';
@@ -117,24 +116,21 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        {/* Filter Categories */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveFilter(category.id)}
-              className={`px-6 py-2 rounded-full font-medium transition-all shadow-sm hover:shadow-md ${
-                activeFilter === category.id
+              className={`px-6 py-2 rounded-full font-medium transition-all shadow-sm hover:shadow-md ${activeFilter === category.id
                   ? 'bg-gradient-to-r from-violet-200 to-purple-200 text-violet-700'
                   : 'bg-violet-50 text-slate-600 hover:bg-violet-100 hover:text-violet-600 border border-violet-100'
-              }`}
+                }`}
             >
               {category.name} ({category.count})
             </button>
           ))}
         </div>
 
-        {/* All Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <div key={project.id} className="bg-violet-50 rounded-lg overflow-hidden border border-violet-100 hover:border-violet-200 transition-all group hover:transform hover:scale-105 shadow-sm hover:shadow-md">
@@ -142,20 +138,20 @@ const ProjectsSection = () => {
                 <div className="relative w-full h-full p-8 flex flex-col items-center justify-center text-center">
                   <h3 className="text-3xl sm:text-4xl font-semibold text-violet-500 mb-4">Coming Soon!</h3>
                   <p className="text-sm sm:text-base text-slate-400 max-w-sm">
-                      {project.description}
+                    {project.description}
                   </p>
                 </div>
               ) : (
                 <>
                   <div className="relative overflow-hidden">
-                    <img 
-                      src={project.image} 
+                    <img
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-violet-900/50 to-transparent"></div>
                   </div>
-                  
+
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-lg font-semibold text-violet-600">{project.title}</h3>
@@ -181,13 +177,12 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
         <div className="text-center mt-16">
           <p className="text-slate-500 mb-6">
             Want to see more projects or collaborate on new ones?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="https://github.com/jannahkrn"
               target="_blank"
               rel="noopener noreferrer"

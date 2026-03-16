@@ -203,7 +203,7 @@ const ExperienceSection = () => {
   ];
 
   const experiences = [
-     {
+    {
       title: "AI Trainer",
       company: "DataAnnotation",
       location: "New York, USA",
@@ -339,7 +339,6 @@ const ExperienceSection = () => {
                   {exp.description}
                 </p>
 
-                {/* Skills */}
                 {exp.skills.length > 0 && (
                   <div className="mb-4">
                     <h5 className="text-sm font-semibold text-slate-500 mb-2">
@@ -358,7 +357,6 @@ const ExperienceSection = () => {
                   </div>
                 )}
 
-                {/* Achievements */}
                 {exp.achievements.length > 0 && (
                   <div>
                     <h5 className="text-sm font-semibold text-rose-400 mb-2 flex items-center">
@@ -389,7 +387,6 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-violet-300 via-purple-300 to-rose-300 bg-clip-text text-transparent">
@@ -402,7 +399,6 @@ const ExperienceSection = () => {
           </p>
         </div>
 
-        {/* Work Experience */}
         <div className="mb-16">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-left text-violet-600">
             Work Experience
@@ -414,7 +410,6 @@ const ExperienceSection = () => {
           </div>
         </div>
 
-        {/* Organizational Experience */}
         <div className="mb-16">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-left text-violet-600">
             Organizational Experience

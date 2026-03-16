@@ -11,7 +11,7 @@ const EducationSection = () => {
       achievements: [
         'Chairman of Publications and Documentation, PaMTKla 2025 - 2026 Period',
         'Liaison Officer, ONION 13URN 2025',
-        'Member of Digistar Club, 2025', 
+        'Member of Digistar Club, 2025',
         'Backend Developer, Chevalier Laboratory SAS 2024-2025 Period',
         'Member of IoT, Chevalier Laboratory SAS 2024-2025 Period',
         'Public Relation and Service, Marketing Crew 2024-2025 Period'
@@ -34,7 +34,7 @@ const EducationSection = () => {
   ];
 
   return (
-  <section id="education" className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="education" className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -50,13 +50,11 @@ const EducationSection = () => {
         <div className="space-y-12">
           {educationData.map((edu, index) => (
             <div key={index} className="relative">
-              {/* Timeline line */}
               {index !== educationData.length - 1 && (
                 <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet-200 to-rose-200 hidden lg:block"></div>
               )}
-              
+
               <div className={`flex flex-col lg:flex-row gap-8 relative ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-                {/* Garis vertikal tepat di tengah antara dua box */}
                 {edu.school === 'SMA Negeri 1 Polanharjo' && (
                   <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-violet-200 to-rose-200 rounded-full"></div>
                 )}
@@ -75,7 +73,7 @@ const EducationSection = () => {
                     <p className="text-slate-600 leading-relaxed text-left">{edu.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="lg:w-1/2">
                   <div className="bg-rose-50 p-6 rounded-lg border border-rose-100 hover:border-rose-200 transition-all shadow-sm hover:shadow-md text-left">
                     <h5 className="font-semibold mb-4 text-rose-400 flex items-center">
@@ -96,7 +94,7 @@ const EducationSection = () => {
             </div>
           ))}
         </div>
-        </div>
+      </div>
     </section>
   );
 };

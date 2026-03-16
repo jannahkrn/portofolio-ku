@@ -6,8 +6,8 @@ import {
   Palette,
   TrendingUp,
   Settings,
-  FileText,          // ✅ untuk Content Strategy
-  TabletSmartphone,  // ✅ untuk SEO/SEM
+  FileText,
+  TabletSmartphone,
 } from "lucide-react";
 import {
   SiReact,
@@ -34,7 +34,7 @@ import {
   SiNetlify,
   SiGithubactions,
   SiLaravel,
-  SiPostgresql, // ⬅️ Tambahan untuk PostgreSQL
+  SiPostgresql,
 } from "react-icons/si";
 import PhotoshopLogo from "../assets/skill-logos/photoshop.svg";
 import IllustratorLogo from "../assets/skill-logos/illustrator.svg";
@@ -51,7 +51,6 @@ import MeetLogo from "../assets/skill-logos/meet.png";
 import TeamsLogo from "../assets/skill-logos/teams.png";
 
 const SkillsSection = () => {
-  // Skill logo mapping
   const skillLogos = {
     "React.js": <SiReact className="text-sky-500" />,
     "JavaScript (ES6+)": <SiJavascript className="text-yellow-400" />,
@@ -68,7 +67,7 @@ const SkillsSection = () => {
     PHP: <SiPhp className="text-indigo-500" />,
     Laravel: <SiLaravel className="text-red-600" />,
     MySQL: <SiMysql className="text-blue-600" />,
-    PostgreSQL: <SiPostgresql className="text-sky-700" />, // ⬅️ PostgreSQL logo
+    PostgreSQL: <SiPostgresql className="text-sky-700" />,
     "React Native": <SiReact className="text-sky-500" />,
     Flutter: <SiReactrouter className="text-blue-400" />,
     Ionic: <SiReactrouter className="text-blue-500" />,
@@ -88,10 +87,10 @@ const SkillsSection = () => {
       />
     ),
     Prototyping: <SiProtonmail className="text-purple-500" />,
-    "SEO/SEM": <TabletSmartphone className="text-indigo-500" />, // ✅ Tablet/iPad
+    "SEO/SEM": <TabletSmartphone className="text-indigo-500" />,
     "Google Analytics": <SiGoogleanalytics className="text-yellow-500" />,
-    "Social Media Marketing": <Smartphone className="text-blue-500" />, // ✅ Smartphone
-    "Content Strategy": <FileText className="text-emerald-600" />, // ✅ Kertas/Dokumen
+    "Social Media Marketing": <Smartphone className="text-blue-500" />,
+    "Content Strategy": <FileText className="text-emerald-600" />,
     "Facebook Ads": <SiFacebook className="text-blue-600" />,
     "Email Marketing": <SiGmail className="text-red-500" />,
     "Git & GitHub": <SiGithub className="text-gray-800" />,
@@ -281,7 +280,6 @@ const SkillsSection = () => {
     },
   ];
 
-  // Gabungkan semua skill
   const allSkillsRaw = [
     ...skillCategories.flatMap((cat) =>
       cat.skills.map((skill) => ({ ...skill, category: cat.title }))
@@ -296,10 +294,8 @@ const SkillsSection = () => {
     (skill, idx, arr) => arr.findIndex((s) => s.name === skill.name) === idx
   );
 
-  // Filter state
   const [filter, setFilter] = useState("All");
 
-  // Button categories
   const filterButtons = [
     { label: "All", key: "All" },
     { label: "Front End", key: "Frontend Development" },
@@ -310,13 +306,12 @@ const SkillsSection = () => {
     { label: "Digital Marketing", key: "Digital Marketing" },
   ];
 
-  // Gabungkan tools ke dalam filter
   const displayedSkills =
     filter === "All"
       ? allSkills
       : filter === "DevOps & Tools"
-      ? tools.map((tool) => ({ ...tool, category: "DevOps & Tools" }))
-      : allSkills.filter((skill) => skill.category === filter);
+        ? tools.map((tool) => ({ ...tool, category: "DevOps & Tools" }))
+        : allSkills.filter((skill) => skill.category === filter);
 
   return (
     <section id="skills" className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
@@ -333,16 +328,14 @@ const SkillsSection = () => {
           </p>
         </div>
 
-        {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-3 mb-10">
           {filterButtons.map((btn) => (
             <button
               key={btn.key}
               className={`px-4 py-2 rounded-full border font-semibold text-sm transition-colors
-                ${
-                  filter === btn.key
-                    ? "bg-violet-500 text-white border-violet-500"
-                    : "bg-white text-violet-500 border-violet-200 hover:bg-violet-50"
+                ${filter === btn.key
+                  ? "bg-violet-500 text-white border-violet-500"
+                  : "bg-white text-violet-500 border-violet-200 hover:bg-violet-50"
                 }`}
               onClick={() => setFilter(btn.key)}
             >
@@ -351,7 +344,6 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Skill Logos */}
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 mb-16">
           {displayedSkills.map((skill, idx) => (
             <div
@@ -370,7 +362,6 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Soft Skills */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-center mb-8">
             <span className="bg-gradient-to-r from-violet-300 via-purple-300 to-rose-300 bg-clip-text text-transparent">

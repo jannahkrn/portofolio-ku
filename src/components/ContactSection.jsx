@@ -11,22 +11,22 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const serviceId = 'service_l5sjkhq'; 
-    const templateId = 'template_susburu'; 
-    const publicKey = 'njdBF3XdYR4aFXzRt'; 
+    const serviceId = 'service_l5sjkhq';
+    const templateId = 'template_susburu';
+    const publicKey = 'njdBF3XdYR4aFXzRt';
 
     emailjs.sendForm(serviceId, templateId, form.current, publicKey)
       .then((result) => {
-          console.log(result.text);
-          setSubmitStatus('success');
+        console.log(result.text);
+        setSubmitStatus('success');
       }, (error) => {
-          console.log(error.text);
-          setSubmitStatus('error');
+        console.log(error.text);
+        setSubmitStatus('error');
       })
       .finally(() => {
-          setIsSubmitting(false);
-          e.target.reset(); // Mengosongkan form setelah terkirim
-          setTimeout(() => setSubmitStatus(null), 5000); // Menghilangkan pesan status setelah 5 detik
+        setIsSubmitting(false);
+        e.target.reset();
+        setTimeout(() => setSubmitStatus(null), 5000);
       });
   };
 
@@ -134,39 +134,36 @@ const ContactSection = () => {
 
               <form ref={form} onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-6">
-                  {/* Full Name */}
                   <div>
                     <label className="block text-sm font-medium text-violet-600 mb-2">
                       Full Name
                     </label>
                     <input
                       type="text"
-                      name="from_name" // Sesuaikan dengan variabel di template EmailJS
+                      name="from_name"
                       placeholder="Janjun"
                       className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
                       required
                     />
                   </div>
-                  {/* Email Address */}
                   <div>
                     <label className="block text-sm font-medium text-violet-600 mb-2">
                       Email Address
                     </label>
                     <input
                       type="email"
-                      name="from_email" // Sesuaikan dengan variabel di template EmailJS
+                      name="from_email"
                       placeholder="janjun@example.com"
                       className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
                       required
                     />
                   </div>
-                  {/* Message */}
                   <div className="md:col-span-2">
                     <label className="block text-sm font-medium text-violet-600 mb-2">
                       Message
                     </label>
                     <textarea
-                      name="message" // Sesuaikan dengan variabel di template EmailJS
+                      name="message"
                       placeholder="HI JANJUNNN! Let us connect and collaborate on projects!"
                       className="w-full px-4 py-3 bg-violet-50 border border-violet-200 rounded-lg focus:border-blue-400 focus:outline-none transition-colors text-violet-700"
                       rows={5}
@@ -187,10 +184,8 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Info Box Centered below form */}
         <div className="flex justify-center w-full mt-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full w-full px-4">
-            {/* Available Box */}
             <div className="bg-violet-50 border border-violet-200 p-6 rounded-2xl shadow-lg min-h-[220px] flex flex-col justify-center hover:shadow-xl active:scale-95 transition cursor-pointer">
               <h3 className="text-xl font-bold text-green-700 mb-4">
                 Available for New Projects
@@ -205,7 +200,6 @@ const ContactSection = () => {
                 <li>✔ Competitive rates</li>
               </ul>
             </div>
-            {/* Work Statistics Box */}
             <div className="bg-violet-50 border border-violet-200 p-6 rounded-2xl shadow-lg min-h-[220px] flex flex-col justify-center hover:shadow-xl active:scale-95 transition cursor-pointer">
               <h3 className="text-xl font-bold text-purple-700 mb-4">
                 Work Statistics

@@ -9,7 +9,7 @@ import {
   Palette,
   TrendingUp,
   Instagram,
-  MessageCircle, // Change: Added MessageCircle
+  MessageCircle,
 } from "lucide-react";
 
 const Footer = () => {
@@ -69,7 +69,7 @@ const Footer = () => {
     },
     {
       name: "WhatsApp",
-      icon: MessageCircle, // Change: Replaced Whatsapp with MessageCircle
+      icon: MessageCircle,
       url: "https://wa.me/6287847714840",
       color: "hover:text-green-400",
       description: "Chat with me on WhatsApp",
@@ -78,10 +78,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-white border-t border-gray-200">
-      {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand & Description */}
           <div className="lg:col-span-2">
             <div className="mb-6">
               <h3 className="text-left text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mb-4">
@@ -95,7 +93,6 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* Services */}
             <div className="mb-6">
               <h4 className="text-lg font-semibold mb-4 text-gray-800">
                 Services
@@ -113,7 +110,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Social Links */}
             <div>
               <h4 className="text-lg font-semibold mb-4 text-gray-800">
                 Connect With Me
@@ -139,7 +135,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links - tanpa kotak, underline putih saat hover */}
           <div>
             <h4 className="text-lg font-semibold mb-6 text-gray-800 text-left">
               Navigation
@@ -158,7 +153,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info rata kiri */}
           <div className="text-left">
             <h4 className="text-lg font-semibold mb-6 text-gray-800">
               Contact
@@ -195,7 +189,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Footer */}
       <div className="border-t border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
