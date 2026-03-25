@@ -6,11 +6,24 @@ import sportareaImage from '../assets/project/sportarea.png';
 import battlediceImage from '../assets/project/battledice.png';
 import biteImage from '../assets/project/bite.png';
 import etherealStoreImage from '../assets/project/etherealstore.png';
+import ecotaniImage from '../assets/project/ecotani.png';
 
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const projects = [
+    {
+      id: 8,
+      title: 'EcoTani',
+      category: 'web-dev',
+      description: 'A comprehensive platform for sustainable agriculture featuring full UI/UX design in Figma and a functional frontend. It provides features to empower local farmers and eco-friendly practices.',
+      image: ecotaniImage,
+      tech: ['React', 'Tailwind CSS', 'JavaScript', 'Vite', 'Axios', 'Figma', 'UI/UX Design'],
+      github: 'https://github.com/jannahkrn/fe-ecotani.git',
+      live: 'https://ecotani-pearl.vercel.app/',
+      date: 'Sep 2025', 
+      team: 3
+    },
     {
       id: 1,
       title: 'Mandiri Digipreneur Hub-Solo Technopark',
@@ -169,6 +182,28 @@ const ProjectsSection = () => {
                           {tech}
                         </span>
                       ))}
+                    </div>
+                    <div className="mt-5 pt-4 border-t border-violet-100 flex gap-4">
+                      {project.live !== '#' && (
+                        <a 
+                          href={project.live} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 text-xs font-semibold text-violet-600 hover:text-violet-800 transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4" /> Live Demo
+                        </a>
+                      )}
+                      {project.github !== '#' && (
+                        <a 
+                          href={project.github} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-700 transition-colors"
+                        >
+                          <Github className="w-4 h-4" /> Code
+                        </a>
+                      )}
                     </div>
                   </div>
                 </>
